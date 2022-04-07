@@ -1,0 +1,167 @@
+#main-body {
+	margin: 15px 100px;
+}
+.type-operation {
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+}
+/*===================================== CLIENT DIV ==============================================*/
+.Client {}
+#ClientBody-SideBar {
+	padding: 15px;
+	grid-area: ClientBodySideBar;
+}
+#ClientBody-Body {
+	padding: 15px;
+	grid-area: ClientBodyBody;
+}
+#subSelectorNav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+#ProfilDiv {
+	text-align: right;
+	margin-bottom: 15px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.subSelectorNavItemStyle {
+	margin: 0px 0px 0px 0px;
+	padding: 15px;
+	cursor: pointer;
+	font-weight: inherit;
+	/*letter-spacing: 1px;*/
+}
+.subSelectorNavItemStyle:hover {
+	box-shadow: 0 0 1.5px;
+	background-color: #EEE;
+}
+.activeNav-clientmenu {
+	box-shadow: 0 0 1.5px;
+	background-color: #EEE;
+}
+#photoUserProfile {
+	height: 70px;
+	width: auto;
+	border-radius: 50%;
+}
+#content-search-client {
+	margin-bottom: 20px;
+}
+#filter-client-search {
+	border:none;
+	box-shadow: 0 0 2px;
+	padding: 7px 0px 7px 7px;
+	width: 100%;
+}
+#resultat-search-client h5 {
+	margin: 0px;
+	padding: 10px;
+	font-size: inherit;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#resultat-search-client h5:hover {
+	background-color: #EEE;
+	box-shadow: 0 0 1.5px;
+}
+#credtClientTable {
+	margin-top: 20px;
+}
+.tableViewContent {
+	width: 100%;
+	box-shadow: 0 0 2px;
+	border-radius: 5px;
+	text-align: center;
+}
+.tableViewContent th , .tableViewContent td {
+	padding: 10px 10px 10px 20px;
+	box-shadow: 0 0 1px;
+}
+.tableViewContent th , .tableViewContent tr:hover {
+	background-color: #EEE;
+	cursor: pointer;
+}
+.clientAccesPeople-Div {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-areas: "clientAccesPeopleDivImage clientAccesPeopleDivDetails"
+						 "clientAccesPeopleDivFooter clientAccesPeopleDivFooter";
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.clientAccesPeople-Div:hover { opacity: 0.9;  }
+.clientAccesPeople-Div-Image {
+	grid-area: clientAccesPeopleDivImage;
+}
+.clientAccesPeople-Div-Details {
+	grid-area: clientAccesPeopleDivDetails;
+}
+.clientAccesPeople-Div-Footer {
+	grid-area: clientAccesPeopleDivFooter;
+	text-align: right;
+	padding: 5px;
+}
+.clientAccesPeople-Div-Image , .clientAccesPeople-Div-Details {
+	padding: 10px;
+}
+.clientAccesPeople-picture {
+	height: 150px;
+	width: auto;
+}
+.clientAccesPeople-Div , .clientAccesPeople-Div-Footer {  	box-shadow: 0 0 1.5px; }
+.LiveLogContentDiv {
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+	border-radius: 5px;
+	padding: 15px;
+}
+.LiveLogContentDiv span {	box-shadow: 0 0 1px; }
+.LiveLogContentSpan-green { 	color: green; }
+.LiveLogContentSpan-red { 	color: red; }
+
+.CompteMobileDiv {
+	padding: 15px;
+	box-shadow: 0 0 1.5px;
+}
+.CompteMobileTable {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/*===================================== AGENT DIV ==============================================*/
+/*.Agent {box-shadow: 0 0 1px;}*/
+.BodyFieldAgent {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-areas: "BodyFieldAgentMenu BodyFieldAgentBody";
+}
+.BodyFieldDiv-Menu {
+	grid-area: BodyFieldAgentMenu;
+	display: flex;
+	flex-direction: column;
+	/*box-shadow: 0 0 1.5px;*/
+}
+.BodyFieldDiv-Body {
+	grid-area: BodyFieldAgentBody;
+	padding: 10px;
+	/*box-shadow: 0 0 1px;*/
+}
+.sidebarFieldMenu {
+	box-shadow: 0 0 1.5px;
+	padding: 15px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.sidebarFieldMenu i { margin-right: 15px; font-size: 20px; }
+.bodyFieldContentDiv table tbody tr td span { margin-right: 15px; }
+
+
+#AccountSettingSelectingDiv {
+	margin-bottom: 15px;
+}

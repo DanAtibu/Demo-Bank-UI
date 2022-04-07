@@ -1,0 +1,638 @@
+:root{
+	--greenColor :#6dc05a;
+	--blueColor :#4f8bc3;
+	--yellowColor :#bbb352;
+	--redColor :#ab0008;
+	--gridColor :#EEE;
+	--whiteColor :#FFF;
+}
+* {margin: 0px;}
+
+::-webkit-scrollbar{width:7px;background-color:var(--gridColor);}
+::-webkit-scrollbar-thumb{background-color:var(--blueColor);border-radius:10px;}
+html {overflow-x: hidden;}
+body {zoom: 0.75;}
+nav {position: sticky;top: 0;flex-direction: column;background-color:white;}
+nav , #navSectionOne , #navSectionTwo , #navPartyOne , #navPartyOne div,
+#navPartyTwo , #sideBar ,#representationAccountBank_Div_Detail,.Account_Bank_Item , #homeField_Content ,
+#CrudProfileClientDiv , #foundClientItems , #clientField_ContentDiv_Nav ,
+.representativeDivElement , .currentRepresentativeInfo , #CompteMobileOptions ,
+#sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil , #agenceField_Options{display: flex;}
+/*=======================================================================================================*/
+#CurrentAgentProfil {width: 150px;height: 150px;border-radius: 50%;margin: 0px 0px 10px;}
+#createBankAccount {cursor: pointer;padding: 5px;border-radius: 50%;background-color: var(--blueColor);}
+#createBankAccount:hover {opacity: .7;}
+#createBankAccount i {color: var(--whiteColor);}
+/*=======================================================================================================*/
+#SelectedClient select {cursor: pointer;}
+#SelectedClient i {font-size: 30px;}
+#SelectedClient i {margin-right: 15px;}
+#navSectionOne , #navSectionTwo {box-shadow: 0 0 1.5px;}
+#navSectionOne {justify-content: space-between;align-items: center;padding: 5px;}
+#agentProfileImg {width: 70px; height: 70px; border-radius: 50%; margin-right: 10px;}
+#agentProfileDetail {flex-direction: column;justify-content: center;}
+#navSectionTwo {margin:7px 0px 5px 0px;flex-wrap: wrap;box-shadow: 4px 4px 10px 3px rgba(0 ,0 ,0 ,.2)}
+#navPartyTwo {justify-content: center;align-items: center;}
+.navPartyTwoOption{ margin-left:20px; }
+.navPartyTwoOption i {font-size: 25px;}
+#mainIconNotification { border-radius: 50%; padding: 5px; }
+#navPartyTwo select{cursor: pointer;}
+#navPartyTwo select , #navPartyTwo select:focus {border:none; outline: none;}
+.sidebarOption {
+	padding: 10px;
+	cursor: pointer;
+	font-size: initial;
+	margin-right: 5px;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+.sidebarOption i {font-size: 20px; margin-right: 5px;}
+.sidebarOption:hover {border-bottom: 5px solid #4f8bc3;}
+/*.sidebarOptionContentDiv{background-color: var(--whiteColor);}*/
+#bodyDiv {margin: 0px 5% 0px 5%;min-height: 100vh;}
+#mainContentDiv {grid-area: mainContentDiv;	padding-top: 5px;}
+/*=================================== CONTENT PAGE ==========================================*/
+.gridSubdiv { display: grid; grid-template-columns: 1fr 3fr; }
+/*=================================== HOME CONTENT PAGE =====================================*/
+.homeField_ {}
+#homeField_First {
+	display: grid;
+	grid-auto-columns: 2fr 1fr;
+	grid-template-areas:"mainCanvas_Div representationAccountBank_Div";
+	margin-bottom: 10px;
+}
+#mainCanvas_Div {grid-area:mainCanvas_Div;}
+#representationAccountBank_Div {grid-area:representationAccountBank_Div;}
+#representationAccountBank_Div_Detail {
+	flex-wrap: nowrap;
+	justify-content:space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.representationAccountBank_Div_Info {
+	box-shadow:  0 0 2px;
+	padding: 5px;
+	border-radius: 5px;
+	color: var(--whiteColor);
+	letter-spacing: 1px;
+}
+#representationAccountBank_Div_InfoD{background-color: var(--greenColor);}
+#representationAccountBank_Div_InfoC{background-color: var(--redColor);}
+#representationAccountBank_Div_List {height: 450px;overflow-y: auto;}
+#representationAccountBank_Div_List::-webkit-scrollbar{width:5px;background-color:#fff;}
+#representationAccountBank_Div_List::-webkit-scrollbar-thumb{background-color:var(--blueColor);border-radius:10px;}
+.Account_Bank_Item{
+	box-shadow: 0 0 3px;
+	justify-content: space-between;
+	padding: 10px;
+	margin-bottom: 10px;
+	line-height: 25px;
+}
+.Account_Bank_Item div p span {margin-right: 15px;}
+.Account_Bank_Item i {color: var(--blueColor);font-size: 20px;padding:5px;}
+.Account_Bank_Item i:hover{
+	background-color: var(--blueColor);
+	color: #FFF;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#homeField_Second{display: flex;justify-content: flex-end;background-color:;}
+#homeField_Second i {padding: 5px;border-radius: 50%;border:2px solid;margin-left:10px;cursor:pointer;}
+#homeField_Content {padding: 10px;overflow:hidden;flex-wrap: nowrap;}
+/*#homeField_Content::-webkit-scrollbar{width:1px;background-color:#fff;}*/
+.Account_Bank_Item_Detail {
+	margin-right: 30px;
+	box-shadow: 0 0 2px;
+	width: 400px;
+	min-width: 400px;
+	background-color: #272735;
+	color: #FFF;
+	border-radius: 5px;
+}
+.Account_Bank_Item_Detail:hover {background-color:#303a5f; cursor: pointer;}
+.Account_Bank_Item_Detail_Head , .Account_Bank_Item_Detail_Body {padding: 10px;}
+.Account_Bank_Item_Detail_Head{display:flex;justify-content:space-between;align-items: center;margin-bottom: 20px;}
+.Account_Bank_Item_Detail_Head i {font-size: 60px;color: var(--greenColor);}
+.Account_Bank_Item_Detail_Head div {text-align: right;}
+.Account_Bank_Item_Detail_Body div {
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	margin-bottom: 5px;
+	border-radius: 7px;
+}
+.Account_Bank_Item_Detail_Body div span {
+	padding: 5px;
+	color: var(--whiteColor);
+	display: inline-block;
+}
+#Account_Bank_Item_Detail_Body_D{background-color: var(--blueColor);}
+#Account_Bank_Item_Detail_Body_C{background-color: var(--redColor);}
+#Account_Bank_Item_Detail_Body_N{background-color:#61a68a;}
+#Account_Bank_Item_Detail_Body_Y{background-color:#d1547f;}
+#Account_Bank_Item_Detail_Body_H{background-color:#7b5db1;}
+.Account_Bank_Item_Detail_Foot {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #303a5f;
+	padding: 7px;
+}
+.Account_Bank_Item_Detail_Foot i {
+	border-radius: 50px;
+	border:1px solid;
+	padding:7px;
+	cursor: pointer;
+}
+.AccountBankEdit_ {
+	display: grid;
+	grid-auto-columns: repeat(2, 1fr);
+	grid-template-areas: "AccountBankEditBalance AccountBankEditForm";
+}
+#AccountBankEditBalance {grid-area: AccountBankEditBalance;}
+#AccountBankEditForm {grid-area: AccountBankEditForm;margin-left: 40px;}
+#AmountAddToAccountBankDiv , #AmountSubToAccountBankDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+#IOOpersationAccountBankDiv_One {margin-bottom: 50px;}
+#AccountBankMotifSelected {margin-bottom: 10px;}
+#AmountAddToAccountBankDiv input ,#AmountSubToAccountBankDiv input {width: 70%;}
+#AmountAddToAccountBankDiv i ,#AmountSubToAccountBankDiv i {padding: 7px;border:1px solid #4f8bc3; border-radius: 50%;}
+#IOOpersationAccountBankTable {
+	max-height: 550px;
+	min-height: 550px;
+	overflow-y: auto;
+	margin-bottom: 10px;
+}
+#IOOpersationAccountBankMotif {
+	padding: 20px;
+	max-height: 260px;
+	min-height: 260px;
+	overflow-y: auto;
+	box-shadow: inset 0 0 6px var(--blueColor);
+}
+#IOOpersationAccountBankTable::-webkit-scrollbar , #IOOpersationAccountBankMotif::-webkit-scrollbar {width: 5px;}
+#IOOpersationAccountBankTable::-webkit-scrollbar-thumb , #IOOpersationAccountBankMotif::-webkit-scrollbar-thumb
+{background-color: var(--blueColor);}
+/*=================================== CLIENT CONTENT PAGE ===================================*/
+.clientField_ {	grid-template-areas: "clientField_HeaderField clientField_HeaderField" "clientField_Options clientField_ContentDiv";}
+#clientField_HeaderField {grid-area: clientField_HeaderField;}
+#clientField_Options {grid-area: clientField_Options }
+#clientField_ContentDiv {grid-area: clientField_ContentDiv;	padding-left: 15px;}
+#foundClientItems {margin-top: 15px;flex-direction: column;}
+.foundClientItem{padding: 7px;transition: 0.3s}
+.foundClientItem:hover {background-color: var(--gridColor);box-shadow:  0 0 1.5px;cursor: pointer;}
+#clientField_ContentDiv_Nav {flex-wrap: wrap;justify-content: flex-start;margin-bottom: 20px;}
+.clientSelectorNavItem {
+	margin-right: 5px;
+	padding: 7px;
+	cursor: pointer;
+	font-size: 13px;
+}
+/*===================== CRUD ==============================*/
+.Crud_ {
+	display: grid;grid-auto-columns:1fr 1fr;
+	column-gap: 50px;
+	grid-template-areas:"CrudProfileClientDiv CrudProfileClientDiv" "CrudIdentityFormDiv CrudAccountFormDiv";}
+#CrudProfileClientDiv{grid-area: CrudProfileClientDiv;margin-bottom:10px;}
+.externalDetail {padding: 10px;}
+.externalDetail:hover {box-shadow: 0 0 2px;color:var(--blueColor);cursor:pointer;}
+.externalDetail i {padding-right: 15px;color: var(--blueColor);font-size: 20px;}
+.externalDetail a {text-decoration: none;}
+#CrudIdentityFormDiv {grid-area: CrudIdentityFormDiv;}
+#CrudAccountFormDiv {grid-area: CrudAccountFormDiv;}
+/*===================== DEBT ==============================*/
+.Credit_ {display: grid;grid-auto-columns:1fr 1fr;grid-template-areas:"Credit_Div_One Credit_Div_Two" "Credit_Div_Three Credit_Div_Three";}
+#Credit_Div_1 {grid-area: Credit_Div_One;}
+#Credit_Div_2 {grid-area: Credit_Div_Two;}
+#Credit_Div_3 {grid-area: Credit_Div_Three;}
+#Credit_Div_3_Titles {margin-bottom: 20px;}
+#Credit_Div_3_Titles , .Credit_Div_3_Title {padding: 5px;}
+.Credit_Div_3_Title {margin-right: 10px;cursor: pointer;}
+#Credit_Div_3_ContentDivs i {font-size: 20px;}
+#Credit_Div_3_ContentDivs i:hover {color: var(--blueColor);}
+/*===================== DEC BANC ==============================*/
+.DecouvertBancaire_ {
+	display: grid;grid-auto-columns:1fr 1fr;
+	grid-template-areas:"DecouvertBancaireRepresentationDataDiv DecouvertBancaireFormDiv"
+						"DecouvertBancaireLogsTableDiv DecouvertBancaireLogsTableDiv";
+}
+#DecouvertBancaireRepresentationDataDiv {grid-area: DecouvertBancaireRepresentationDataDiv;}
+#DecouvertBancaireFormDiv {grid-area: DecouvertBancaireFormDiv;}
+#DecouvertBancaireLogsTableDiv {grid-area: DecouvertBancaireLogsTableDiv;margin-top: 20px;}
+/*===================== REM BANC ==============================*/
+.Remplacants_  {
+	display: grid;grid-auto-columns:1fr 1fr;
+	grid-template-areas:"RemplacantsOptions RemplacantsOptions"
+						"RemplacantsOptionsDiv RemplacantsOptionsDiv";
+}
+#RemplacantsOptions {grid-area: RemplacantsOptions;margin-bottom: 20px;}
+#RemplacantsOptionsDiv {grid-area: RemplacantsOptionsDiv;}
+.RemplacantsOptionItem {padding: 5px;cursor: pointer;}
+.RemplacantsOptionItem_Information_ {
+	display: grid;grid-auto-columns:1fr 1fr;
+	grid-template-areas:"addAccountRepresentationForm viewAccountRepresentationInfo";
+}
+#addAccountRepresentationForm {grid-area: addAccountRepresentationForm;}
+#viewAccountRepresentationInfo {grid-area: viewAccountRepresentationInfo;}
+.RemplacantsOptionItem_List_ {
+	/*display: grid;grid-auto-columns:2fr 3fr;*/
+	/*grid-template-areas:"RemplacantsOptionItem_ListItem RemplacantsOptionItem_ListDiv";*/
+}
+/*#RemplacantsOptionItem_ListItem {grid-area: RemplacantsOptionItem_ListItem;padding: 0px 30px 0px 0px;}*/
+/*#RemplacantsOptionItem_ListDiv {grid-area: RemplacantsOptionItem_ListDiv;}*/
+
+.representativeDivElement {flex-direction: row;	align-items: center;margin-bottom: 10px;}
+.currentRepresentativeImg {width: 150px; height: 150px; border-radius: 50%;margin-right: 20px;}
+.currentRepresentativeInfo {flex-direction: column;}
+/*===================== CARNET CHEQUE ==============================*/
+.CarnetDeCheque_ {
+	display: grid;
+	grid-auto-columns: 1fr 1fr;
+	grid-template-areas:"CarnetDeCheque_Form_Div CarnetDeCheque_Info_Div"
+						"CarnetDeCheque_Active_Div CarnetDeCheque_Inactive_Div";
+}
+#CarnetDeCheque_Form_Div , #CarnetDeCheque_Active_Div {margin: 0px 20px 20px 0px;}
+#CarnetDeCheque_Form_Div {grid-area:CarnetDeCheque_Form_Div;}
+#CarnetDeCheque_Info_Div {grid-area:CarnetDeCheque_Info_Div;}
+#CarnetDeCheque_Active_Div {grid-area:CarnetDeCheque_Active_Div;}
+#CarnetDeCheque_Inactive_Div {grid-area:CarnetDeCheque_Inactive_Div;}
+/*===================== CARNET CHEQUE ==============================*/
+.CompteMobile_ {
+	display: grid;
+	grid-auto-columns: 1fr 4fr;
+	grid-template-areas:"CompteMobileOptions CompteMobileContentDiv";}
+#CompteMobileOptions {grid-area:CompteMobileOptions;flex-direction: column;}
+.CompteMobileOption {padding: 7px;margin: 0px 0px 5px 0px;cursor: pointer;}
+.CompteMobileOption i {margin-right:10px;color: var(--blueColor);}
+#CompteMobileContentDiv {grid-area:CompteMobileContentDiv;padding-left: 20px;}
+.CompteMobileOptionsHome_ {
+	display: grid;
+	grid-auto-columns: 1fr 1fr;
+	grid-template-areas:"CompteMobileOptionsHomeForm CompteMobileOptionsHomeInfo";}
+#CompteMobileOptionsHomeForm {grid-area: CompteMobileOptionsHomeForm;}
+#CompteMobileOptionsHomeInfo {grid-area: CompteMobileOptionsHomeInfo;}
+/*=================================== AGENT CONTENT PAGE ===================================*/
+.agentField_ {grid-template-areas: "agentField_HeaderField agentField_HeaderField" "agentField_Options agentField_MainContentDiv";}
+#agentField_HeaderField {grid-area: agentField_HeaderField;}
+#agentField_Options {grid-area: agentField_Options;}
+#agentField_MainContentDiv {grid-area: agentField_MainContentDiv;padding-left: 20px;}
+.sidebarContainerOptionStatus_{}
+#sidebarContainerOptionStatus_Options{margin-bottom:25px;}
+.sidebarContainerOptionStatus_Option {padding: 7px;cursor:pointer;}
+.sidebarContainerOptionSetting_ {
+	display: grid;
+	grid-auto-columns:1fr 1fr;
+	grid-template-areas: "sidebarContainerOptionSetting_RepresentationData sidebarContainerOptionSettingAgentDivForm";
+}
+#sidebarContainerOptionSetting_RepresentationData{grid-area:sidebarContainerOptionSetting_RepresentationData;}
+#sidebarContainerOptionSetting_RepresentationData .representationData {margin:0px 20px 20px 0px;}
+#sidebarContainerOptionSettingAgentDivForm{grid-area:sidebarContainerOptionSettingAgentDivForm;}
+
+.sidebarContainerOptionSingleAgentAccount_ {}
+#sidebarContainerOptionSingleAgentAccount_Head {margin-bottom:20px;}
+#sidebarContainerOptionSingleAgentAccount_Head span , #sidebarContainerOptionSingleAgentAccount_Statistic_Options span {padding: 7px;margin-right:5px;cursor:pointer;}
+.sidebarContainerOptionSingleAgentAccount_Accueil_ {
+	display: grid;
+	grid-row-gap: 20px;
+	column-gap: 100px;
+	grid-auto-columns:1fr 1fr;
+	grid-template-areas: 
+	"sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil"
+	"sidebarContainerOptionSingleAgentAccount_BodyDiv_Info sidebarContainerOptionSingleAgentAccount_BodyDiv_Form";
+}
+#sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil {justify-content: space-between;grid-area: sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil;}
+#sidebarContainerOptionSingleAgentAccount_BodyDiv_Info {grid-area:sidebarContainerOptionSingleAgentAccount_BodyDiv_Info;}
+#sidebarContainerOptionSingleAgentAccount_BodyDiv_Info form {margin-top: 30px;}
+#sidebarContainerOptionSingleAgentAccount_BodyDiv_Form {grid-area:sidebarContainerOptionSingleAgentAccount_BodyDiv_Form;}
+
+/*=================================== AGENCE CONTENT PAGE ===================================*/
+.agenceField_{
+	display: grid;
+	grid-auto-columns:1fr 5fr;
+	grid-template-areas: 
+	"agenceField_HeaderField agenceField_HeaderField"
+	"agenceField_Options agenceField_ContentDiv";
+}
+#agenceField_HeaderField{grid-area: agenceField_HeaderField;}
+#agenceField_Options{
+	grid-area:agenceField_Options;
+	flex-direction: column;
+	height: 800px;
+	overflow-y: auto;
+	padding: 5px 10px;
+}
+#agenceField_Options::-webkit-scrollbar{width:4px;}
+#agenceField_Options::-webkit-scrollbar-thumb{background-color: var(--blueColor);}
+.agenceField_Option , #databaseField_Options span {box-shadow: 0 0 2px;padding: 10px;cursor: pointer;margin-bottom:7px;}
+.agenceField_Option {display: flex;justify-content: space-between;align-items: center;}
+.agenceField_Option .fas {border-radius: 50%;padding:5px;border:2px solid var(--blueColor);}
+.agenceField_Option.activeNavElement_3 i {color: var(--whiteColor);border:1px solid var(--whiteColor);}
+#agenceField_ContentDiv{
+	display: grid;
+	grid-auto-columns:repeat(3 , 1fr);
+	grid-template-areas:"agenceField_ContentDiv_Info agenceField_ContentDiv_Form agenceField_ContentDiv_Agent";
+	grid-area:agenceField_ContentDiv;
+	padding-left: 20px;
+}
+#agenceField_ContentDiv_Info{grid-area: agenceField_ContentDiv_Info;margin-right:20px;}
+#agenceField_ContentDiv_Form{grid-area: agenceField_ContentDiv_Form;margin-right:20px;}
+#agenceField_ContentDiv_Agent{grid-area: agenceField_ContentDiv_Agent;}
+#agenceField_ContentDiv_Form form {margin-bottom: 20px;}
+/*=================================== AGENCE CONTENT PAGE ===================================*/
+.databaseField_ {
+	display: grid;
+	grid-auto-columns:repeat(3 , 1fr);
+	grid-template-areas:"databaseField_HeaderField databaseField_HeaderField"
+						"databaseField_Options databaseField_ContentDiv";
+}
+#databaseField_HeaderField{grid-area: databaseField_HeaderField;}
+#databaseField_Options{
+	display: flex;
+	flex-direction: column;
+	grid-area: databaseField_Options;
+	max-height:900px;
+	overflow-y: scroll;
+	padding: 1px 5px;
+}
+#databaseField_Options::-webkit-scrollbar {width:5px;background-color: var(--gridColor)}
+#databaseField_Options::-webkit-scrollbar-thumb {background-color:var(--blueColor);border-radius:10px;}
+#databaseField_Options span{display: flex;align-items: center;}
+#databaseField_Options span i {color: var(--blueColor);font-size: 20px;margin-right: 15px;}
+#databaseField_ContentDiv{grid-area: databaseField_ContentDiv;padding: 0px 15px;}
+#databaseField_ContentDiv div , #rawQueryDBFORM {margin-bottom: 10px;}
+/*=================================== LIVESERVER CONTENT PAGE =================================*/
+#liveField_Options {
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow:inset 0 0 5px var(--blueColor);
+}
+.liveField_Response {margin-left: 20px;padding: 7px;border-radius: 50%;color: var(--whiteColor);}
+#R100 {background-color: #272735;}
+#R200 {background-color: var(--greenColor);}
+#R300 {background-color: var(--blueColor);}
+#R400 {background-color: var(--redColor);}
+#R500 {background-color: var(--yellowColor);}
+#liveField_ContentDiv {
+	display: grid;
+	grid-auto-columns: 1fr 4fr;
+	grid-template-areas: "liveField_ContentDiv_Options liveField_ContentDiv_Consoles";
+}
+#liveField_ContentDiv_Options{grid-area: liveField_ContentDiv_Options;}
+#liveField_ContentDiv_Consoles{grid-area: liveField_ContentDiv_Consoles;}
+#liveField_ContentDiv_Options div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border:1px solid var(--blueColor);
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.liveField_ContentDiv_Option .fas {font-size: 25px;}
+#liveField_ContentDiv_Consoles {padding-left: 20px;}
+.liveField_Console {
+	background-color: #272735;
+	min-height: 850px;
+	max-height: 850px;
+	overflow-y: auto;
+	color: var(--whiteColor);
+	padding: 15px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.liveField_Console_connexion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding: 3px;
+}
+.liveField_Console_connexion:hover{box-shadow: 0 0 2px var(--whiteColor);}
+.liveField_Console::-webkit-scrollbar{width:8px;}
+.liveField_Console::-webkit-scrollbar-thumb{ background-color: var(--blueColor);}
+
+/*================================ MODAL CREATION CONTENT PAGE ===============================*/
+.ModelsCreation_ {
+	display: grid;
+	grid-auto-columns: 4fr 1fr;
+	grid-template-areas:"ModelsCreation_HeaderField ModelsCreation_HeaderField"
+						"ModelsCreation_ContentDiv ModelsCreation_Options";
+}
+#ModelsCreation_HeaderField{grid-area: ModelsCreation_HeaderField;}
+#ModelsCreation_Options{
+	grid-area: ModelsCreation_Options;
+	padding: 0px 5px;
+	display: flex;
+	flex-direction: column;
+	max-height: 700px;
+	overflow-y: auto;
+}
+#ModelsCreation_ContentDiv{
+	max-height: 410px;
+	min-height: 410px;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+	grid-area: ModelsCreation_ContentDiv;
+	height: 500px;
+	display: grid;
+	grid-gap: 30px;
+	grid-auto-columns: repeat(3 , 1fr);
+	grid-template-areas:"ModelsCreation_ContentDiv_Form ModelsCreation_ContentDiv_Info ModelsCreation_ContentDiv_ListObject"
+						"ModelsCreation_ContentDiv_Content ModelsCreation_ContentDiv_Content ModelsCreation_ContentDiv_ListObject";
+}
+#ModelsCreation_ContentDiv:-webkit-scrollbar{width:7px;}
+#ModelsCreation_ContentDiv:-webkit-scrollbar-thumb{background-color: var(--blueColor);}
+#ModelsCreation_ContentDiv_Form{grid-area:ModelsCreation_ContentDiv_Form;}
+#ModelsCreation_ContentDiv_Info{grid-area:ModelsCreation_ContentDiv_Info;}
+#ModelsCreation_ContentDiv_ListObject{grid-area:ModelsCreation_ContentDiv_ListObject;}
+#ModelsCreation_ContentDiv_Content{grid-area: ModelsCreation_ContentDiv_Content;}
+#ModelsCreation_ContentDiv_ListObject select {padding:0px;max-height:395px;min-height:395px;}
+.ModelsCreation_Option {
+	padding: 10px;
+	cursor: pointer;
+	box-shadow:inset 0 0 4px var(--blueColor);
+	text-align: center;
+	margin-bottom: 5px;
+}
+.ModelsCreation_Option:hover {background-color: var(--blueColor);color: var(--whiteColor);}
+#ModelModalArea {
+	display: grid;
+	grid-auto-columns:1fr 2fr;
+	grid-template-areas: "ModelModalArea_1 ModelModalArea_2" ;
+}
+#ModelModalArea_1{grid-area: ModelModalArea_1;}
+#ModelModalArea_2{grid-area: ModelModalArea_2;}
+.TypeConfigModalOptionDiv {
+	display: grid;
+	grid-auto-columns:1fr 1fr;
+	grid-template-areas: "TypeConfigModalOptionDiv_Select TypeConfigModalOptionDiv_Form";
+	margin-top: 20px;
+}
+.TypeConfigModalOptionDiv select {min-height: 600px;grid-area: TypeConfigModalOptionDiv_Select;}
+.TypeConfigModalOptionDiv:last-child{grid-area: TypeConfigModalOptionDiv_Form;}
+/*=================================== OPERATION CONTENT PAGE =================================*/
+#OperationsFieldDiv {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*=================================== STATISTIC CONTENT PAGE =================================*/
+.statisticField_ {
+	display: grid;
+	grid-auto-columns: 1fr 5fr;
+	grid-template-areas:"statisticField_HeaderField statisticField_HeaderField"
+						"statisticField_Options statisticField_ContentDiv";
+}
+#statisticField_HeaderField{grid-area: statisticField_HeaderField;}
+#statisticField_Options{grid-area: statisticField_Options;}
+#statisticField_Options div {padding: 5px;border:1px solid var(--blueColor);margin-bottom: 5px;cursor:pointer;}
+#statisticField_Options div i {color: var(--blueColor);font-size: 25px; margin-right: 20px;}
+#statisticField_ContentDiv{grid-area: statisticField_ContentDiv;padding-left: 30px;}
+.statisticField_ContentDiv_div {margin-top: 20px;}
+/*=================================== SETTING CONTENT PAGE ===================================*/
+.settingField_ {
+	display: grid;
+	grid-auto-columns:1fr;
+	grid-template-areas:"settingField_HeaderField settingField_HeaderField"
+						"settingField_ContentDiv settingField_ContentDiv";
+}
+#settingField_HeaderField{grid-area: settingField_HeaderField;}
+#settingField_ContentDiv{
+	grid-area: settingField_ContentDiv;
+	display: grid;
+	grid-gap: 40px;
+	grid-auto-columns:1fr 1fr 2fr;
+	grid-template-areas:"settingField_ContentDiv_Info settingField_ContentDiv_Form settingField_ContentDiv_Prefer";
+}
+/*#settingField_ContentDiv_Info , #settingField_ContentDiv_Form{}*/
+#settingField_ContentDiv_Form form {margin: 30px 0px 30px 0px;}
+#representationData_Own_Account {margin-bottom: 30px;}
+#settingField_ContentDiv_Info{grid-area: settingField_ContentDiv_Info;}
+#settingField_ContentDiv_Form{grid-area: settingField_ContentDiv_Form;}
+#settingField_ContentDiv_Prefer{grid-area: settingField_ContentDiv_Prefer;}
+
+/* =================================== CHAT DISCUSSIN AREA ============================================= */
+									/* [ DROPBOX ] */
+.DropBox-Body-Item-Chat {
+	display: flex;
+	align-items: center;
+	padding:7px;
+	cursor: pointer;
+}
+.DropBox-Body-Item-Chat:hover {background-color: #EEE;}
+.DropBox-Body-Item-Chat-Icon img {
+	box-shadow: 0 0 3px;
+	border-radius: 50%;
+	margin-right: 10px;
+	width: 75px;
+	height: 75px;
+}
+.DropBox-Body-Item-Chat-Detail div {display: flex;justify-content: space-between;width: 395px;}
+.DropBox-Body-Item-Chat-Detail div h4 {display: flex;justify-content: flex-end;}
+																			/* [ END DROPBOX ] */
+
+#ChatModalBody {min-height:850px;max-height:850px;top: 30;}
+#ChatDiscussionDivArea {
+	display: grid;
+	grid-auto-columns:1fr 3fr;
+	grid-gap: 10px;
+	grid-template-areas:"ChatDiscussionDivArea_Contacts ChatDiscussionDivArea_Messages";
+}
+#ChatDiscussionDivArea_Contacts{grid-area: ChatDiscussionDivArea_Contacts;border-right: 5px solid #EEE;padding-right: 5px;}
+#ChatDiscussionDivArea_Messages{grid-area: ChatDiscussionDivArea_Messages;}
+#ChatDiscussionDivArea_Contacts_Status {display: flex;align-items: center;}
+#ChatDiscussionDivArea_Contacts_Status span {margin-right: 10px;}
+#ChatModalHeadInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+.ItemContactList {max-height:750px;	overflow: auto;}
+#ChatDiscussionDivArea_MsgContent {height:700px;overflow: auto;padding: 10px;scroll-behavior: smooth;}
+#ChatDiscussionDivArea_MsgContent:-webkit-scrollbar {background-color: var(--whiteColor);}
+#ChatDiscussionDivArea_MsgContent:-webkit-scrollbar-thumb {background-color: var(--blueColor);}
+.ItemContact {
+	display: flex;
+	align-items: center;
+	padding: 5px 10px 5px;
+	cursor: pointer;
+	overflow: auto;
+}
+.ItemContact:hover {background-color: var(--gridColor);	border-radius: 5px;}
+.ItemContactProfilDiv{display:flex;justify-content: center;align-items: center;}
+.ItemContactProfil {width: 95px;height: 95px;border-radius: 50%;margin-right: 10px;}
+.ItemContactMainContent {width:450px;}
+.ItemContactInfo {float: left;}
+.ItemContactDetail {float: right;text-align: center;}
+.ItemContactMsgNbr {
+	padding:8px;
+	border-radius: 50%;
+	background-color:var(--blueColor);
+	color: var(--whiteColor);
+}
+#ChatDiscussionDivArea_MsgContent {margin-top: 10px;}
+.OutSideMessage , .InSideMessage {	margin-bottom: 5px;	display: block; }
+.OutSideMessage div p:hover , .InSideMessage div p:hover {opacity: .8;cursor: pointer;}
+.OutSideMessage div , .InSideMessage div {max-width: 50%;}
+.OutSideMessage div p , .InSideMessage div p {padding:15px;	border-radius: 5px;	margin-bottom: 4px;}
+.InSideMessage div p {background-color:var(--gridColor);}
+.OutSideMessage div p {	background-color: var(--blueColor);	color: var(--whiteColor); }
+.OutSideMessage div span{float: right;}
+.OutSideMessage {	display: flex; justify-content: flex-end; }
+.InSideMessage{	display: flex;	justify-content: flex-start; }
+#ChatFormMessage {display: flex;justify-content: space-between;margin-top: 5px;}
+#ChatFormMessageInput {
+	background-color: var(--gridColor);
+	resize: none;
+	width: 93%;
+	border-radius: 10px;
+	border: none;
+	padding:5px;
+}
+#ChatFormMessageInput:focus {border: none;}
+#ChatFormMessageButton {font-size: 45px;cursor: pointer;}
+#ChatFormMessageButton:hover {opacity: .8;}
+
+#formFilterChatAgentID , #bodySettingChatAction {display: flex;justify-content: center;align-items: center;}
+#formFilterChatAgentID {width: 500px;}
+#formFilterChatAgentID input {border:none;padding:5px;}
+#formFilterChatAgentID input::placeholder { color: var(--blueColor);}
+#formFilterChatAgentID i {font-size: 20px;margin-right: 10px;}
+#bodySettingChat {
+	display: grid;
+	grid-auto-columns:2fr 1fr;
+	grid-column-gap:30px;
+	grid-template-areas: "bodySettingChatList bodySettingChatAction" ;
+	padding: 10px;
+}
+#bodySettingChatList {grid-area: bodySettingChatList;min-height:830px;max-height:830px;overflow: auto;}
+#bodySettingChatList div {margin-right: 5px;}
+#bodySettingChatAction {grid-area: bodySettingChatAction;flex-direction: column;}
+#bodySettingChatAction img {width: auto; height: 500px;margin-bottom: 20px;}
+#bodySettingChatAction div {display: flex;justify-content: space-between;width: 400px;}
+#bodySettingChatAction div button {width: 40%;}
+
+
+
+#AvatarList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-grow: 100px;
+}
+.AvatarItem {width: 300px;height:300px;object-fit:contain; border-radius: 50%;cursor:pointer;padding:10px;border:1px solid #fff;}
+.AvatarItem:hover {box-shadow: 5px 5px 40px 5px #eee;border: 1px solid #eee;}
+.SelectedAvatar {box-shadow: 5px 5px 40px 5px #eee; border: 1px solid #eee;}

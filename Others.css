@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&display=swap');
+:root{
+	--greenColor :#6dc05a;
+	--blueColor :#4f8bc3;
+	--yellowColor :#bbb352;
+	--redColor :#ab0008;
+	--gridColor :#EEE;
+	--whiteColor :#FFF;
+	--blackColor: #000;
+	--darkColor1: #232729;
+	--darkColor2: #272735;
+}
+i {font-size: 20px;color: var(--blueColor);}
+* {
+	font-weight: bold;
+	font-family: 'Montserrat', cursive;
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+#logoutButton {	background-color: #303a5f;border-radius: 5px; }
+.OButton {	background-color: #303a5f;border-radius: 5px; }
+.block {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: var(--whiteColor);
+}
+.block hr {	box-shadow: 0 0 1px 0px #4f8bc3;margin: 10px 0px 10px 0px;}
+.block-head {display:flex;justify-content:space-between;align-items:center;}
+/*.block-body {background-color: #eee;width: 100%;}*/
+.textCenter {text-align: center;}
+::-webkit-scrollbar{width:7px;height:7px;background-color:var(--gridColor);}
+::-webkit-scrollbar-thumb{background-color:var(--blueColor);border-radius:10px;}
+/*===================================== INVISIBLE ELEMENT ===================================*/
+.invisibleDiv {	display: none; }
+/*=================================== CIRCLE INFORMATIONS */
+.GreenCircle , .RedCircle {padding:5px;border-radius: 50%;
+	width:3px;height: 3px;
+}
+.GreenCircle {
+	background-color: var(--greenColor);
+}
+.RedCircle {
+	background-color: var(--redColor);
+}
+/*======================================= ACTIVE ELEMENT ====================================*/
+.activeNavElement_0 { border-bottom: 5px solid #4f8bc3;}
+.activeNavElement_1 {background-color: var(--gridColor);box-shadow: 0 0 1.5px;}
+.activeNavElement_2 {border-left: 6px solid var(--blueColor);box-shadow: 0 0 3px var(--blueColor);}
+.activeNavElement_3 {
+	background-color: var(--blueColor);
+	box-shadow: 0 0 3px var(--blueColor);
+	color:white;
+	border:1px solid var(--blueColor);
+	border-radius: 5px;
+	/*background-image: radial-gradient(transparent,#4f8bc3,#4f8bc3,#4f8bc3,#ffffff);*/
+}
+.activeNavElement_4 {background-color:var(--gridColor);}
+.activeNavElement_5 {background-color:var(--whiteColor);}
+/*===================================== CURRENT FIELD NAME ====================================*/
+.HeaderField {
+	padding: 15px 20px 15px 40px;
+	margin-bottom: 10px;
+	background-color: #4f8bc3;
+	border-radius: 5px;
+	color: var(--whiteColor);
+	letter-spacing: 3px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.HeaderField i {
+	color: var(--whiteColor);
+	cursor:pointer;
+}
+/*===============================================[ LOADER STYLE ]===============================================*/
+.loader {
+	border-bottom: 5px solid #000;
+	border-top: 5px solid #000;
+	border-right: 5px solid #FFF;
+	border-left: 5px solid #FFF;
+	border-radius: 50%;
+	padding: 6px;
+	animation: loaderAnnimation_1 .5s linear infinite;
+}
+.loader { width: 15px; height: 15px; }
+@keyframes loaderAnnimation_1 {
+  0% { transform: rotate(360deg);}
+  100% { transform: rotate(0deg); }
+}
+/*===============================================[ BUTTONS STYLE ]===============================================*/
+button {
+	padding: 11px;
+	border:none;
+	border-radius: 5px;
+	color: #FFF;
+	font-family: inherit;
+	font-weight: bold;
+	box-shadow: 0 0 1.5px;
+	cursor: pointer;
+	min-width:100px;
+	letter-spacing: 1px;
+}
+button:hover {opacity: .7;}
+.btndgr{background-color:#ab0008;}
+.btnble{background-color:#4f8bc3;}
+.btnwrn{background-color:#bbb352;}
+.btngrn{background-color:#6dc05a;}
+.btndrk{background-color:var(--darkColor1);}
+/*===============================================*/
+.HeaderTableDiv {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	margin-bottom:5px;
+}
+.dt-button {padding:5px 20px 5px 20px;}
+.dt-button i {font-size:30px;margin-right:10px;color: var(--whiteColor);}
+.dtb-text {font-size:20px;display:inline-block;}
+.nvgbtn {padding:10px;border-radius:50%;border:1px solid var(--blueColor);}
+.nvgbtn.previous {margin-right:15px;}
+.nvgbtn.next {margin-left:15px;}
+span a.paginate_button  {
+	margin: 0px 7px 0px 7px;
+	padding: 8px;
+	box-shadow: inset 0 0 5px var(--blueColor);
+	border-radius:5px;
+}
+span a.paginate_button.current {background-color:var(--blueColor);color:var(--whiteColor);}
+/*.dt-Foot {background-color: #eee;}*/
+.dataTables_info {
+	display: inline-block;
+}
+.dataTables_paginate , .dataTables_paginate span {
+	display: flex;
+	justify-content:flex-end;
+	align-items: center;
+}
+/*.dataTables_paginate span {color: #ddd;}*/
+/*===============================================[ ALERT	 STYLE ]===============================================*/
+.NotificationMessage {
+	position: relative;
+	background-color: #EEE;
+	border: 1px solid #EEE;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width:50px;
+	padding: 8px;
+}
+.NotificationMessage_Text {padding: 5px;}
+.NotificationMessage_Number {
+	position: absolute;
+	top: -9px;
+	right: -9px;
+	background-color: red;
+	color: #FFF;
+	padding: 6px;
+	border-radius: 50%;
+	animation: NotificationAnnimation 1.5s linear infinite;
+}
+@keyframes NotificationAnnimation { 0% { transform: scale(.8);} 100% { transform: scale(1.1); } }
+/*========================================== TABLE N 0 =======================================*/
+._table_0 {width: 100%;}
+._table_0 thead {
+	background-color: #4f8bc3;
+	color:#ffffff;
+}
+._table_0 thead tr th { box-shadow: 0 0 0 2px #4f8bc3;}
+._table_0 thead tr , ._table_0 tbody tr {  text-align: center; }
+._table_0 thead tr th , ._table_0 tbody tr td{ padding: 10px; }
+._table_0 tbody tr:hover {
+	background-color: #EEE;
+	cursor: pointer;
+	box-shadow: 0 0 1.5px;
+}
+.typeOperation {
+	color: white;
+	padding: 7px;
+	border-radius: 10px;
+	width: 100%;
+}
+.depot {background-color: #6dc05a;	box-shadow: 5px 5px 10px 0px #6dc05a;}
+.retrait {background-color: #4f8bc3;	box-shadow: 5px 5px 10px 0px #4f8bc3;}
+.virement {background-color: #bbb352;	box-shadow: 5px 5px 10px 0px #bbb352;}
+.credit {background-color: #ab0008;	box-shadow: 5px 5px 10px 0px #ab0008;}
+/*========================================== TABLE N 1 ==========================================*/
+._table_1 {width: 100%; }
+._table_1 tbody tr td {padding:7px 0px 7px 0px;}
+._table_1 tbody tr td i.fa-check{color:var(--greenColor);}
+._table_1 tbody tr td i.fa-times{color:var(--redColor);}
+._table_1 tbody tr:hover {background-color:var(--gridColor);box-shadow:0 0 1.5px;border-radius:5px;cursor:pointer;}
+/*=================================  [ MODAL FIELD STYLE ] =================================================*/
+.TimeSetter {display: flex;justify-content:space-between;align-items: center;width: 400px;box-shadow:0 0 3px;}
+.TimeSetter input {max-width:170px;min-width: 170px;border:none;cursor: pointer;}
+/*=============================================== [ DROPBOX ] =================================================*/
+.DropBox {background-color: white;position: relative;}
+.DropBox-Content {
+	background-color: white;
+	position: absolute;
+	left: -400px;
+	bottom: -540px;
+	border:1px solid var(--blueColor);
+	z-index: 100;
+}
+.DropBox-Head , .DropBox-Foot {	letter-spacing: 1px;text-align: center;background-color: var(--blueColor); color: var(--whiteColor);}
+.DropBox-Head , .DropBox-Foot {padding: 8px;}
+.DropBox-Foot {cursor: pointer;}
+.DropBox-Head {}
+.DropBox-Body {
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 450px;
+	min-height: 450px;
+	overflow-y: scroll;
+}
+/*=================================  [ MODAL FIELD STYLE ] =================================================*/
+.ModalArea {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/*background-color: rgba(0 ,0 ,0 ,.7);*/
+	/*overflow-x: hidden;*/
+}
+.ModalAreaContent {
+	position: fixed;
+	top:0;
+	background-color: #FFF;
+	color: #000;
+	padding: 15px 15px 10px 15px;
+	box-shadow: inset 0 0 10px var(--blueColor);
+	box-shadow: 10px 10px 30px 5px rgba(0 ,0 ,0 ,.2) , -10px -10px 30px 5px rgba(0 ,0 ,0 ,.2);
+	border-radius: 5px;
+	margin-top: 50px;
+	min-width: 70%;
+	max-width: 70%;
+}
+.ModalSeparator {
+	box-shadow: 0 0 1px 0px #4f8bc3;
+	margin: 10px 0px 10px 0px;
+}
+/*.ModalHead {}*/
+.ModalOptionsArea {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.ModalOptions span {padding: 10px;cursor: pointer;}
+.ModalOptions span  i {margin-right: 10px;}
+
+.ModalBody {
+	padding: 0px 10px 0px 10px;
+	max-height: 100vh;
+	/*min-height: 100vh;*/
+	overflow-y: auto;
+}
+.ModalBody::-webkit-scrollbar{width:5px;background-color:#fff;}
+.ModalBody::-webkit-scrollbar-thumb{background-color:var(--blueColor);border-radius:10px;}
+.ModalFoot {display: flex;justify-content: flex-end;align-items: center;}
+.ModalFoot button {margin-left: 20px;padding: 5px;cursor: pointer;}
+.ModalAnnimation {animation: ModalAnnimationView 1s ease;}
+@keyframes ModalAnnimationView {
+	from {transform: translateX(-100%);} to {transform: translateX(0%);}
+}
+.ModalForm {}
+.ModalFormContent {
+	display: flex;
+	/*flex-direction: row;*/
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.InputKindModal {
+	padding: 5px;
+	font-size: inherit;
+	width: 23%;
+	box-shadow:inset 0px 0px 2px var(--blueColor);
+}
+
+
+#GlobalDivImageModal {
+	max-width: 600px;
+	min-width: 600px;
+}
+.GlobalDivModal {
+	max-height: 500px;
+	min-height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#GlobalImageModal {
+	/*border: 1px solid;*/
+	max-height: 500px;
+	min-height: 500px;
+	max-width: 500px;
+	min-width: 500px;
+	object-fit:contain;
+}
+/*================================ CHAT MODAL ====================================================*/
+#ChatModalBody {min-height:850px;max-height:850px;top: 30;}
+#ChatDiscussionDivArea {
+	display: grid;
+	grid-auto-columns:1fr 3fr;
+	grid-gap: 10px;
+	grid-template-areas:"ChatDiscussionDivArea_Contacts ChatDiscussionDivArea_Messages";
+}
+#ChatDiscussionDivArea_Contacts{grid-area: ChatDiscussionDivArea_Contacts;border-right: 5px solid #EEE;padding-right: 5px;}
+#ChatDiscussionDivArea_Messages{grid-area: ChatDiscussionDivArea_Messages;}
+#ChatDiscussionDivArea_Contacts_Status {display: flex;align-items: center;}
+#ChatDiscussionDivArea_Contacts_Status span {margin-right: 10px;}
+#ChatModalHeadInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+.ItemContactList {max-height:750px;	overflow: auto;}
+#ChatDiscussionDivArea_MsgContent {max-height:700px;min-height:700px;overflow: auto;padding: 10px;scroll-behavior: smooth;}
+#ChatDiscussionDivArea_MsgContent:-webkit-scrollbar {background-color: var(--whiteColor);}
+#ChatDiscussionDivArea_MsgContent:-webkit-scrollbar-thumb {background-color: var(--blueColor);}
+.ItemContact {
+	display: flex;
+	align-items: center;
+	padding: 5px 10px 5px;
+	cursor: pointer;
+	overflow: auto;
+}
+.ItemContact:hover {background-color: var(--gridColor);	border-radius: 5px;}
+.ItemContactProfilDiv{display:flex;justify-content: center;align-items: center;}
+.ItemContactProfil {width: 95px;height: 95px;border-radius: 50%;margin-right: 10px;}
+.ItemContactMainContent {width:450px;}
+.ItemContactInfo {float: left;}
+.ItemContactDetail {float: right;text-align: center;}
+.ItemContactMsgNbr {
+	padding:8px;
+	border-radius: 50%;
+	background-color:var(--blueColor);
+	color: var(--whiteColor);
+}
+#ChatDiscussionDivArea_MsgContent {margin-top: 10px;}
+.OutSideMessage , .InSideMessage {	margin-bottom: 5px;	display: block; }
+.OutSideMessage div p:hover , .InSideMessage div p:hover {opacity: .8;cursor: pointer;}
+.OutSideMessage div , .InSideMessage div {max-width: 50%;}
+.OutSideMessage div p , .InSideMessage div p {padding:15px;	border-radius: 5px;	margin-bottom: 4px;}
+.InSideMessage div p {background-color:var(--gridColor);}
+.OutSideMessage div p {	background-color: var(--blueColor);	color: var(--whiteColor); }
+.OutSideMessage div span{float: right;}
+.OutSideMessage {	display: flex; justify-content: flex-end; }
+.InSideMessage{	display: flex;	justify-content: flex-start; }
+#ChatFormMessage {display: flex;justify-content: space-between;margin-top: 5px;}
+#ChatFormMessageInput {
+	background-color: var(--gridColor);
+	resize: none;
+	width: 93%;
+	border-radius: 10px;
+	border: none;
+	padding:5px;
+}
+#ChatFormMessageInput:focus {border: none;}
+#ChatFormMessageButton {font-size: 45px;cursor: pointer;}
+#ChatFormMessageButton:hover {opacity: .8;}
+
+#formFilterChatAgentID , #bodySettingChatAction {display: flex;justify-content: center;align-items: center;}
+#formFilterChatAgentID {width: 500px;}
+#formFilterChatAgentID input {border:none;padding:5px;}
+#formFilterChatAgentID input::placeholder { color: var(--blueColor);}
+#formFilterChatAgentID i {font-size: 20px;margin-right: 10px;}
+#bodySettingChat {
+	display: grid;
+	grid-auto-columns:2fr 1fr;
+	grid-column-gap:30px;
+	grid-template-areas: "bodySettingChatList bodySettingChatAction" ;
+	padding: 10px;
+}
+#bodySettingChatList {grid-area: bodySettingChatList;min-height:830px;max-height:830px;overflow: auto;}
+#bodySettingChatList div {margin-right: 5px;}
+#bodySettingChatAction {grid-area: bodySettingChatAction;flex-direction: column;}
+#bodySettingChatAction img {width: auto; height: 500px;margin-bottom: 20px;}
+#bodySettingChatAction div {display: flex;justify-content: space-between;width: 400px;}
+#bodySettingChatAction div button {width: 40%;}
+
+#AvatarList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-grow: 100px;
+}
+.AvatarItem {width: 300px;height:300px;object-fit:contain; border-radius: 50%;cursor:pointer;padding:10px;border:1px solid #fff;}
+.AvatarItem:hover {box-shadow: 5px 5px 40px 5px #eee;border: 1px solid #eee;}
+.SelectedAvatar {box-shadow: 5px 5px 40px 5px #eee; border: 1px solid #eee;}
+
+/*======================================= INPUT STYLE ========================================*/
+input:focus , textarea:focus {outline: none;border:1px solid var(--blackColor);}
+input , textarea , select {
+	width: 96%;
+	padding: 5px;
+	font-size: inherit;
+	border: 1px solid var(--blueColor);
+	letter-spacing: 1px;
+}
+input[type = checkbox] {width: auto;}
+select , select:focus {outline: none;}
+select {width: 100%;}
+.select_input_multiple , textarea {resize: none;padding:0px;}
+.select_input_multiple {width: 97.5%;margin-bottom: 8px;height: 200px;}
+.select_input_multiple option {padding: 10px;width: 100%;cursor: pointer;}
+.select_input_multiple::-webkit-scrollbar {width: 5px;background-color: var(--gridColor);}
+.select_input_multiple::-webkit-scrollbar-thumb {background-color: var(--blueColor);}
+/*======================================= FORM STYLE 0 ======================================*/
+.form_0 {margin: 0px 5px 0px 5px;}
+.form_0 div {display: flex;	flex-direction: column;justify-content: center;align-items: center;}
+.form_0_input , .form_0_Button {padding: 5px;border-radius: 3px;}
+.form_0_input {font-size: inherit;margin-bottom: 8px;}
+.form_0_Button {width: 100%;background-color:var(--blueColor);color: white;	border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;cursor: pointer;}
+/*======================================= FORM STYLE 1 ======================================*/
+.form_1 {margin: 0px 5px 20px 5px;}
+.form_1_body {display: flex;flex-direction: column;align-items: center;}
+.form_1_input , .form_1_Button , .form_1_head {padding: 5px;border-radius:3px;}
+.form_1_input {font-size: inherit;}
+.form_1_Button , .form_1_head {background-color:var(--blueColor);color: white;border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;cursor: pointer;
+}
+.form_1_head , .form_1_input {margin-bottom: 8px;}
+.form_1_Button{width: 100%;}
+/*======================================= FORM STYLE 2 ======================================*/
+.form_2 {margin: 0px 5px 0px 5px;box-shadow:inset 0 0 6px var(--blueColor);}
+.form_2_body{padding: 10px;}
+.form_2_input_check{margin-right: 20px;cursor: pointer;}
+.form_2_body_item{margin-bottom: 10px;}
+.form_2_Button {
+	width: 100%;
+	background-color:var(--blueColor);
+	color: white;
+	border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;
+	cursor: pointer;
+}
+
+/*======================================= FORM STYLE 3 ======================================*/
+
+.form_3 {box-shadow:inset 0 0 8px var(--blueColor);}
+.form_3_body{padding: 30px 30px 10px 30px;display: flex;justify-content: center;flex-direction: column;}
+.form_3 p , .form_3_body p input , .form_3_body p textarea {margin-top: 5px;}
+.form_3 p button {width: 100%;}
+
+/*==================================== DATA REPRESENTATIVE ==================================*/
+
+.representationData {/*box-shadow: 0 0 2px;*/}
+.representationDataHead , .representationDataBodyItem {padding: 7px;}
+.representationDataHead {
+	background-color:var(--blueColor);
+	color: #FFF;
+}
+.representationDataBodyItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 1.5px;
+}
+
+/*====================================  DIV MODAL SIGLE =================================*/
+.ModalDivButtonClick {
+	padding: 10px;
+	box-shadow:inset 0 0 5px var(--blueColor);
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+/*====================================== LIVE SERVER ===============================================*/
+.liveField_Console {
+	background-color: #272735;
+	min-height: 850px;
+	max-height: 850px;
+	overflow-y: auto;
+	color: var(--whiteColor);
+	padding: 15px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.liveField_Console_connexion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding: 3px;
+}
+.liveField_Console_connexion:hover{box-shadow: 0 0 2px var(--whiteColor);}
+.liveField_Console::-webkit-scrollbar{width:8px;}
+.liveField_Console::-webkit-scrollbar-thumb{ background-color: var(--blueColor);}
+.consoleServerUI span {margin:0px 0px 5px 0px;}
+.requestOK {font-weight: bold; font-size: 18px; color:green;}
+.requestNO {font-weight: bold; font-size: 18px; color:red;}
+.requestRE {font-weight: bold; font-size: 18px; color:var(--blueColor);}
+.requestBU {font-weight: bold; font-size: 18px; color:var(--yellowColor);}

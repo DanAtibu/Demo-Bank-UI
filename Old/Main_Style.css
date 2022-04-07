@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;700&family=Montserrat:wght@300;400&family=Newsreader&family=Open+Sans&family=Oswald:wght@200&family=PT+Sans&display=swap');
+html {
+	overflow-x: hidden;
+	zoom: 0.9;
+}
+body {
+	margin:0px;
+}
+header {
+	overflow-x: hidden;
+}
+input {
+	outline-width: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	border-width: 0px;
+	border-color: none;
+	border: none;
+	font-family: inherit;
+	box-shadow: 0 0 2px
+}
+/*===================================== LOADER DIV ==============================================*/
+.cursorPE { cursor: pointer; }
+.bigIconMenu {
+	font-size: 30px;
+	margin: 15px;
+	cursor: pointer;
+	color: #4494BB;
+}
+#userImage {
+	height: 50px;
+}
+#main-body {
+	padding: 10px;
+	/*position: relative;*/
+	letter-spacing: 1px;
+}
+#main-head {
+	background-color: #EEE;
+	display: grid;
+	grid-auto-columns: 2fr 4fr 2fr;
+	grid-template-areas: "mainlogo formsearchmain optionsmain";
+}
+#main-logo {
+	grid-area: mainlogo;
+	margin: auto auto auto 10px;
+}
+.bigIconBar {
+	font-size: 20px;
+}
+#form-search-main {
+	grid-area: formsearchmain;
+	text-align: center;
+	margin: 15px 10% 10px 10%;
+}
+#options-main {
+	grid-area: optionsmain;
+	text-align: right;
+	margin: auto 10px auto;
+}
+#options-main i {margin: 12px;}
+#formRearchMain-Input-text {
+	border:none;
+	box-shadow: 0 0 2px;
+	padding: 12px;
+	width: 80%;
+	border-radius: 5px;
+}
+/*#formRearchMain-Input-text:hover , #formRearchMain-Input-text:focus , .filterInputTable:focus*/
+input:focus , input:hover {
+	box-shadow: 0 0 5px #4494BB;
+}
+#menu-head {
+	background-color: #2d2d2d;
+	color: white;
+	text-transform: uppercase;
+}
+#nav-menu {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+	margin: 0;
+}
+#nav-menu li {
+	padding: 15px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+#nav-menu li:hover {
+	background-color: #EEE;
+	color: #000;
+}
+/*====================================================================*/
+.fa-cog {
+	animation: cog 2s linear infinite;
+}
+@keyframes cog {
+	0% { transform : rotate(0deg) }
+	100% { transform : rotate(380deg) }
+}
