@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bank </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Main_Style.css">
+	<link rel="stylesheet" type="text/css" href="Admin_Style.css">
+	<link rel="stylesheet" type="text/css" href="D:\PROJET PROGRAMMING\BankApp\FrontEnd\_All\All.css">
+
+	<!-- DOWNLOADING EXTERNE FILES  -->
+
+	<!-- DOWNLOADING JQUERY LIB  -->
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<!-- DOWNLOADING DATATABLE LIB AND MORE DEPENDENCIES  -->
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+	<script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+	<script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+	<!-- <script src="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"></script> -->
+
+	
+	<!-- DOWNLOADING TOAST LIB  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+	<!-- DOWNLOADING CHART LIB  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+
+	<!-- DOWNLOADING FONT AWAESOME LIB  -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+	<header>
+		<div id="main-head">
+			<div class="first-item-head" id="main-logo">
+				<i id="logo" class="fas bigIconBar fa-bars"></i>
+				<span> Dashboard Bank </span>
+			</div>
+			<div class="first-item-head" id="form-search-main">
+				<form>
+					<input id="formRearchMain-Input-text" placeholder="Recherche..." type="text" name="MainSearch">
+				</form>
+			</div>
+			<div class="first-item-head" id="options-main">
+				<img id="userImage" class="boxcolorNav" src="D:\PROJET PROGRAMMING\SuperStore\Main_App\static\Main_App\Profil\Icon.png">
+			</div>
+		</div>
+		<div id="menu-head">
+			<ul id="nav-menu">
+				<li id="Home" class="activeNav-menu"> Home </li>
+				<li id="Client"> Client </li>
+				<li id="Agent"> Agent </li>
+				<li id="Agence"> Agence </li>
+				<li id="Live"> Live </li>
+				<li id="DataBase"> DataBase </li>
+				<li id="OperationDRVL"> Operations </li>
+				<li id="Report"> Rapport </li>
+				<li id="Chat"> Chat </li>
+				<li id="MyAccountSetting"> Mon Compte </li>
+				<li id="Setting"> Paramêtre </li>
+			</ul>
+		</div>
+		<div id="loader"></div>
+	</header>
+		
+	<div id="main-body">
+		<div id="#Home" class="Home contentDiv">
+			<table id='HomeLiveTableOperation' class="_table display">
+				<thead>
+					<tr>
+						<th> #CODE </th>
+						<th> TYPE </th>
+						<th> NUMERO DE COMPTE </th>
+						<th> MONTANT </th>
+						<th> DATE </th>
+						<th> HEURE </th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td> B7346 </td>
+							<td class="type-operation red">
+								<div>
+									RETRAIT
+								</div>
+							</td>
+							<td> BI560089498594 </td>
+							<td> 900 000 </td>
+							<td> 2021-09-22 </td>
+							<td> 22:48 </td>
+						</tr>
+						<tr>
+							<td> B2985 </td>
+							<td class="type-operation yellow">
+								<div>
+									VIREMENT
+								</div>
+							</td>
+							<td> BI560089498594 </td>
+							<td> 250 500 </td>
+							<td> 2022-10-02 </td>
+							<td> 09:23 </td>
+						</tr>
+						<tr>
+							<td> B7346 </td>
+							<td class="type-operation green">
+								<div>
+									DEPOT
+								</div>
+							</td>
+							<td> BI560089498594 </td>
+							<td> 900 000 </td>
+							<td> 2021-09-22 </td>
+							<td> 22:48 </td>
+						</tr>
+						<tr>
+							<td> B2985 </td>
+							<td class="type-operation blue">
+								<div>
+									VIREMENT
+								</div>
+							</td>
+							<td> BI560089498594 </td>
+							<td> 250 500 </td>
+							<td> 2022-10-02 </td>
+							<td> 09:23 </td>
+						</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="#Client" class="Client contentDiv invisibleDiv">
+			<div id="HeaderField"><span>CLIENT FIELD</span></div>
+			<div id="BodyFieldClient">
+				<div id="ClientBody-SideBar">
+					<div id="content-search-client">
+						<form>
+							<input type="text" name="" placeholder="Filter Client ..." id="filter-client-search">
+						</form>
+					</div>
+					<div id="resultat-search-client">
+						<h5> ATIBU DAN SILENGE</h5>
+						<h5> DIEUDONNE ASSUMALI COSTES </h5>
+						<h5> JAMES AMULI JACQUE </h5>
+						<h5> PARFAIT MBURUNGU</h5>
+						<h5> ISRAEL KABUNAGWA KAB </h5>
+					</div>
+				</div>
+				<div id="ClientBody-Body">
+					<div id="subSelectorNav">
+						<h5 id="Crud" class="clientSelectorNavItem subSelectorNavItemStyle activeNav-clientmenu"> CRUD </h5>
+						<h5 id="Credit" class="clientSelectorNavItem subSelectorNavItemStyle"> CREDIT </h5>
+						<h5 id="DecouvertBancaire" class="clientSelectorNavItem subSelectorNavItemStyle"> DECOUVERT BANCAIRE </h5>
+						<h5 id="Operations" class="clientSelectorNavItem subSelectorNavItemStyle"> OPERATIONS </h5>
+						<h5 id="Remplacants" class="clientSelectorNavItem subSelectorNavItemStyle"> REMPLACANTS </h5>
+						<h5 id="CarnetDeCheque" class="clientSelectorNavItem subSelectorNavItemStyle"> CARNET DE CHEQUE </h5>
+						<h5 id="LiveLogClient" class="clientSelectorNavItem subSelectorNavItemStyle"> LIVE </h5>
+						<h5 id="CompteMobile" class="clientSelectorNavItem subSelectorNavItemStyle"> COMPTE MOBILE </h5>
+						<h5 id="ChartClient" class="clientSelectorNavItem subSelectorNavItemStyle"> CHART </h5>
+					</div>
+					<hr>
+					<div id="#Crud" class="contentDivClient">
+						<div id="ProfilDiv">
+							<img src="D:\PROJET PROGRAMMING\SuperStore\Main_App\static\Main_App\Profil\Icon.png" id="photoUserProfile">
+						</div>
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> CREATE CLIENT FORM </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="#Credit" class="contentDivClient invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> CREATE CLIENT FORM </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="creditClientDiv">
+							<table id="Table_ClientcredtClientTable1" class="_table">
+								<thead>
+									<tr>
+										<th> #CODE </th>
+										<th> PAIE </th>
+										<th> MONTANT </th>
+										<th> RESTE </th>
+										<th> DATE </th>
+										<th> HEURE </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> B2985 </td>
+										<td>
+											<div class="type-operation red">
+												NON
+											</div>
+										</td>
+										<td> 250 500 </td>
+										<td> 250 500 </td>
+										<td> 2022-10-02 </td>
+										<td> 09:23 </td>
+									</tr>
+									<tr>
+										<td> B7346 </td>
+										<td>
+											<div class="type-operation red">
+												OUI
+											</div>
+										</td>
+										<td> 900 000 </td>
+										<td> 250 500 </td>
+										<td> 2021-09-22 </td>
+										<td> 22:48 </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="creditClientDiv">
+							<table id="Table_ClientcredtClientTable2" class="_table">
+								<thead>
+									<tr>
+										<th> #CODE </th>
+										<th> PAIE </th>
+										<th> MONTANT </th>
+										<th> RESTE </th>
+										<th> DATE </th>
+										<th> HEURE </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tableTR">
+										<td> B2985 </td>
+										<td>
+											<div class="type-operation green">
+												NON
+											</div>
+										</td>
+										<td> 250 500 </td>
+										<td> 250 500 </td>
+										<td> 2022-10-02 </td>
+										<td> 09:23 </td>
+									</tr>
+									<tr class="tableTR">
+										<td> B7346 </td>
+										<td>
+											<div class="type-operation green">
+												OUI
+											</div>
+										</td>
+										<td> 900 000 </td>
+										<td> 250 500 </td>
+										<td> 2021-09-22 </td>
+										<td> 22:48 </td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="#DecouvertBancaire" class="contentDivClient invisibleDiv">
+						<div>
+							<table id="" class="tableViewContent">
+								<thead>
+									<tr>
+										<th> TITRE </th>
+										<th> VALEUR </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> MONTANT MIN </td>
+										<td> 125 000 </td>
+									</tr>
+									<tr>
+										<td> TAUX D'INTERET </td>
+										<td> 5 </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> MODIFICATION FORM </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="#Operations" class="contentDivClient invisibleDiv">
+							<table id="credtClientTable" class="_table">
+								<thead>
+									<tr>
+										<th> #CODE </th>
+										<th> TYPE </th>
+										<th> MONTANT HT </th>
+										<th> MONTANT TTC </th>
+										<th> TAUX </th>
+										<th> DATE </th>
+										<th> HEURE </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tableTR">
+										<td> B2985 </td>
+										<td>
+											<div class="type-operation red">
+												RETRAIT
+											</div>
+										</td>
+										<td> 250 500 </td>
+										<td> 250 500 </td>
+										<td> 3.0 </td>
+										<td> 2022-10-02 </td>
+										<td> 09:23 </td>
+									</tr>
+									<tr class="tableTR">
+										<td> B7346 </td>
+										<td>
+											<div class="type-operation green">
+												DEPOT
+											</div>
+										</td>
+										<td> 900 000 </td>
+										<td> 250 500 </td>
+										<td> 2.5 </td>
+										<td> 2021-09-22 </td>
+										<td> 22:48 </td>
+									</tr>
+									<tr class="tableTR">
+										<td> B7346 </td>
+										<td>
+											<div class="type-operation yellow">
+												DEPOT
+											</div>
+										</td>
+										<td> 900 000 </td>
+										<td> 250 500 </td>
+										<td> 2.5 </td>
+										<td> 2021-09-22 </td>
+										<td> 22:48 </td>
+									</tr>
+									<tr class="tableTR">
+										<td> B7346 </td>
+										<td>
+											<div class="type-operation blue">
+												DEPOT
+											</div>
+										</td>
+										<td> 900 000 </td>
+										<td> 250 500 </td>
+										<td> 2.5 </td>
+										<td> 2021-09-22 </td>
+										<td> 22:48 </td>
+									</tr>
+								</tbody>
+							</table>						
+					</div>
+					<div id="#Remplacants" class="contentDivClient invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> CREATION D'UN NOUVEAU REMPLANCANT </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="clientAccesPeople-Div cursorPE">
+							<div class="clientAccesPeople-Div-Image">
+								<img src="D:/PROJET PROGRAMMING/HTML CSS/E-Commerce/static/images/7.jpg" class="clientAccesPeople-picture">
+							</div>
+							<div class="clientAccesPeople-Div-Details">
+								<h3> MAGULIKOTU MIRORO </h3>
+								<h3> HOMME </h3>
+								<h3> +243 983478463 </h3>
+								<address> GOMA AV KIRAMBO N° 435 </address>
+							</div>
+							<div class="clientAccesPeople-Div-Footer">
+								<button class="btngrn cursorPE"> ACTIVER </button>
+								<button class="btndgr cursorPE"> DESACTIVER </button>
+							</div>
+						</div>
+						<div class="clientAccesPeople-Div cursorPE">
+							<div class="clientAccesPeople-Div-Image">
+								<img src="D:/PROJET PROGRAMMING/HTML CSS/E-Commerce/static/images/6.jpg" class="clientAccesPeople-picture">
+							</div>
+							<div class="clientAccesPeople-Div-Details">
+								<h3> MAGULIKOTU MIRORO </h3>
+								<h3> HOMME </h3>
+								<h3> +243 983478463 </h3>
+								<address> GOMA AV KIRAMBO N° 435 </address>
+							</div>
+							<div class="clientAccesPeople-Div-Footer">
+								<button class="btngrn cursorPE"> ACTIVER </button>
+								<button class="btndgr cursorPE"> DESACTIVER </button>
+							</div>
+						</div>
+					</div>
+					<div id="#CarnetDeCheque" class="contentDivClient invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> ENREGISTREMENT D'UN NOUVEAU CARNET </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextForm">
+										<input type="text" name="" class="InputTextForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div>
+							<table id="Table_CarrnetDeChequeList" class="_table">
+								<thead>
+									<tr>
+										<th> # </th>
+										<th> N° </th>
+										<th> #CODE </th>
+										<th> DES </th>
+										<th> A </th>
+										<th> DATE </th>
+										<th> TERMINE </th>
+										<th> ACTIF </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> <input type="checkbox" class="checkbox-table" value="B456"> </td>
+										<td> 01 </td>
+										<td> B456 </td>
+										<td> 10 </td>
+										<td> 100 </td>
+										<td> 2020-09-12 </td>
+										<td><div class="type-operation red">OUI</div></td>
+										<td><div class="type-operation red">NON</div></td>
+									</tr>
+									<tr>
+										<td> <input type="checkbox" class="checkbox-table" value="B239"> </td>
+										<td> 02 </td>
+										<td> B239 </td>
+										<td> 10 </td>
+										<td> 100 </td>
+										<td> 2020-09-12 </td>
+										<td><div class="type-operation green">NON</div></td>
+										<td><div class="type-operation green">OUI</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="#LiveLogClient" class="contentDivClient invisibleDiv">
+						<div class="LiveLogContentDiv">
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						</div>
+					</div>
+					<div id="#CompteMobile" class="contentDivClient invisibleDiv">
+						<div class="CompteMobileTable">
+							<table class="tableViewContent">
+								<thead>
+									<tr>
+										<th> MARQUE </th>
+										<th> VERSION </th>
+										<th> ESPACE </th>
+										<th> RAM </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> SAMSUNG </td>
+										<td> S8 </td>
+										<td> 8 Go </td>
+										<td> 1.5 Go </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LOGIN COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LOGOUT COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LES OPERATIONS VIA COMPTE MOBILE </span>						
+						</div>
+					</div>
+					<div id="#ChartClient" class="contentDivClient invisibleDiv">
+						<canvas id="canvasChartClient" class="chart"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#Agent" class="Agent contentDiv invisibleDiv">
+			<div id="HeaderField"><span>AGENT FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span id="SearchAgent" class="jsDivElementAgent sidebarFieldMenu activeNav-clientmenu"> <i class="fas fa-search"></i> Filtre </span>
+					<span id="LiveAgent" class="jsDivElementAgent sidebarFieldMenu"> <i class="fas fa-book"></i> Live Operations </span>
+					<span id="AccoutAgent" class="jsDivElementAgent sidebarFieldMenu"> <i class="fas fa-user"></i> Compte </span>
+					<span id="StatisticAgent" class="jsDivElementAgent sidebarFieldMenu"> <i class="fas fa-chart-line"></i> Statistic </span>
+					<span id="SettingAgent" class="jsDivElementAgent sidebarFieldMenu"> <i class="fas fa-cog"></i> Paramêtre </span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div id="#SearchAgent" class="contentDivAgent bodyFieldContentDiv">
+							<table id="Table_AgentSearchAgentFilter" class="_table">
+								<thead>
+									<tr>
+										<th> #CODE </th>
+										<th> NOM </th>
+										<th> PRENOM </th>
+										<th> POST-NOM </th>
+										<th> DRN/CNNX </th>
+										<th> AGENCE </th>
+										<th> TITRE </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tableTR">
+										<td> <span class="type-connexion red"></span> B2985 </td>
+										<td> ATIBU </td>
+										<td> DAN </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> GOMA </td>
+										<td> GUICHET </td>
+									</tr>
+									<tr class="tableTR">
+										<td> <span class="type-connexion green"></span> B2985 </td>
+										<td> BUKUZI </td>
+										<td> JOLIE </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> BUKAVU </td>
+										<td> CHEF AGENCE </td>
+									</tr>
+									<tr class="tableTR">
+										<td> <span class="type-connexion green"></span> B2985 </td>
+										<td> ATIBU </td>
+										<td> DAN </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> KINSHASA </td>
+										<td> GUICHET </td>
+									</tr>
+									<tr class="tableTR">
+										<td> <span class="type-connexion red"></span> B2985 </td>
+										<td> BUKUZI </td>
+										<td> JOLIE </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> GOMA </td>
+										<td> AGENT COMMERCIAL </td>
+									</tr>
+									<tr class="tableTR">
+										<td> <span class="type-connexion red"></span> B2985 </td>
+										<td> ATIBU </td>
+										<td> DAN </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> BENI </td>
+										<td> GUICHET </td>
+									</tr>
+									<tr class="tableTR">
+										<td> <span class="type-connexion green"></span> B2985 </td>
+										<td> BUKUZI </td>
+										<td> JOLIE </td>
+										<td> SILENGE </td>
+										<td> 2020-10-11 / 09:23 </td>
+										<td> KINSHASA </td>
+										<td> CHEF AGENCE </td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<div id="#LiveAgent" class="contentDivAgent bodyFieldContentDiv invisibleDiv">
+						<div class="LiveLogContentDiv">
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>					
+						</div>
+					</div>
+					<div id="#AccoutAgent" class="contentDivAgent bodyFieldContentDiv invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> CREATE / MODIFICATION AGENT FORMULAIRE </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="#StatisticAgent" class="contentDivAgent bodyFieldContentDiv invisibleDiv">
+						<div>
+							<div class="form-create-client">
+								<div class="form-header">
+									<span> FILTRE PERIODIQUE D'UN EMPLOYEE </span>
+								</div>
+								<div class="form-body">							
+									<form>
+										<div class="form-body-Input">
+											<input type="date" name="" class="InputTextGeneralForm">
+											<input type="date" name="" class="InputTextGeneralForm">
+										</div>
+										<div class="form-body-Button">
+											<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<canvas class="chart"></canvas>
+					</div>
+					<div id="#SettingAgent" class="contentDivAgent bodyFieldContentDiv invisibleDiv">
+						<div class="CompteMobileTable">
+							<table id="Table_AgentSettingAgent" class="tableViewContent">
+								<thead>
+									<tr>
+										<th> MARQUE </th>
+										<th> VERSION </th>
+										<th> ESPACE </th>
+										<th> RAM </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> SAMSUNG </td>
+										<td> S8 </td>
+										<td> 8 Go </td>
+										<td> 1.5 Go </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="">
+							<span> CONNEXION LOGIN </span>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#Agence" class="Agence contentDiv invisibleDiv">
+			<div id="HeaderField"><span>AGENCE FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span id="FilterAgence" class="jsDivElementAgence sidebarFieldMenu activeNav-clientmenu"> <i class="fas fa-search"></i> Filtre </span>
+					<span id="AgentAgence" class="jsDivElementAgence sidebarFieldMenu"> <i class="fas fa-users"></i> Agents </span>
+					<span id="LiveAgence" class="jsDivElementAgence sidebarFieldMenu"> <i class="fas fa-book"></i> Live Operations </span>
+					<span id="StatisticAgence" class="jsDivElementAgence sidebarFieldMenu"> <i class="fas fa-chart-line"></i> Statistic </span>
+					<span id="SettingAgence" class="jsDivElementAgence sidebarFieldMenu"> <i class="fas fa-cog"></i> Paramêtre </span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div id="#FilterAgence" class="contentDivAgence bodyFieldContentDiv">
+						<table id="Table_AgenceFilterAgence" class="_table">
+							<thead>
+								<tr>
+									<th> #EN LIGNE/CODE </th>
+									<th> NBR/AGENT </th>
+									<th> ADRESSE IP </th>
+									<th> PLACE </th>
+									<th> CREATION </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> <span class="type-connexion red"></span> B2985 </td>
+									<td> 23 </td>
+									<td> 172.200.122.90 </td>
+									<td> GOMA </td>
+									<td> 2020-12-09 </td>
+								</tr>
+								<tr class="tableTR">
+									<td> <span class="type-connexion green"></span> B2985 </td>
+									<td> 13 </td>
+									<td> 122.130.22.50 </td>
+									<td> GOMA </td>
+									<td> 2021-01-22 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#AgentAgence" class="contentDivAgence bodyFieldContentDiv invisibleDiv">
+						<table id="Table_AgennceAgenceAgent" class="_table">
+							<thead>
+								<tr>
+									<th> #EN LIGNE </th>
+									<th> NOM </th>
+									<th> POST-NOM </th>
+									<th> PRENOM </th>
+									<th> TELEPHONE </th>
+									<th> TITRE </th>
+									<th> CREER </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> <span class="type-connexion red"></span> OFFLINE </td>
+									<td> JORDI </td>
+									<td> BARAKA </td>
+									<td> MUPIDWA </td>
+									<td> +256 787637647 </td>
+									<td> CHEF AGENCE </td>
+									<td> 2020-12-09 </td>
+								</tr>
+								<tr class="tableTR">
+									<td> <span class="type-connexion green"></span> ONLINE </td>
+									<td> JORDI </td>
+									<td> BARAKA </td>
+									<td> MUPIDWA </td>
+									<td> +256 787637647 </td>
+									<td> GUICHET </td>
+									<td> 2020-12-09 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#LiveAgence" class="contentDivAgence bodyFieldContentDiv invisibleDiv">
+						<div class="LiveLogContentDiv">
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+							<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>					
+						</div>
+					</div>
+					<div id="#StatisticAgence" class="contentDivAgence bodyFieldContentDiv invisibleDiv">
+						<div>
+							<div class="form-create-client">
+								<div class="form-header">
+									<span> FILTRE PERIODIQUE D'UNE AGENCE </span>
+								</div>
+								<div class="form-body">							
+									<form>
+										<div class="form-body-Input">
+											<input type="date" name="" class="InputTextGeneralForm">
+											<input type="date" name="" class="InputTextGeneralForm">
+										</div>
+										<div class="form-body-Button">
+											<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<canvas class="chart"></canvas>						
+					</div>
+					<div id="#SettingAgence" class="contentDivAgence bodyFieldContentDiv invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> PARAMËTRE </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<label for="Ae"> CONNEXION LOGIN </label>
+										<input type="checkbox" class="checkbox-table" id="Ae">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#Live" class="Live contentDiv invisibleDiv">
+			<div id="HeaderField"><span>LIVE SERVER FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span class="sidebarFieldMenu"> <i class="fas fa-battery-three-quarters"></i> 89 % </span>
+					<span class="sidebarFieldMenu"> <i class="fas fa-calendar"></i> 2021-07-09 / 18:33 </span>
+					<span class="sidebarFieldMenu"> <i class="fas fa-wifi"></i> 23 Connexion Réussie / Jr </span>
+					<span class="sidebarFieldMenu"> <i class="fas fa-wifi"></i> 11 Connexion Echouée / Jr </span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div class="LiveLogContentDiv">
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-red"> HTTP ./Api/Login/ 202 3450 OK </span>
+						<span class="LiveLogContentSpan-green"> HTTP ./Api/Login/ 202 3450 OK </span>		
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#DataBase" class="DataBase contentDiv invisibleDiv">
+			<div id="HeaderField"></i><span>DATABASE / TABLES FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span id="dbDepot" class="jsDivElementDatabase sidebarFieldMenu"><i class="fas fa-table"></i>Dépôt</span>
+					<span id="dbRetrait" class="jsDivElementDatabase sidebarFieldMenu"><i class="fas fa-table"></i>Retrait</span>
+					<span id="dbVirement" class="jsDivElementDatabase sidebarFieldMenu"><i class="fas fa-table"></i>Virement</span>
+					<span id="dbCredit" class="jsDivElementDatabase sidebarFieldMenu"><i class="fas fa-table"></i>Crédit</span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div id="subSelectorNav">
+						<h5 id="DBOptionDetails" class="dbSelectorNavItem subSelectorNavItemStyle activeNav-clientmenu">DB</h5>
+						<h5 id="dbContentTable" class="dbSelectorNavItem subSelectorNavItemStyle">DONNEES</h5>
+						<h5 id="dbInformationTable" class="dbSelectorNavItem subSelectorNavItemStyle">CHART-INFORMATION</h5>
+					</div>
+					<hr>
+					<div id="#DBOptionDetails" class="contentDivDB">
+							<table id="Table_DatabaseDBOperationDetails" class="tableViewContent">
+								<thead>
+									<tr>
+										<th> TABLE </th>
+										<th> NOMBRE DES LIGNES </th>
+										<th> NOMBRE DES COLONNES </th>
+										<th> DERNIER ENREGISTREMENT </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> AGENT </td>
+										<td> 25 </td>
+										<td> 5 </td>
+										<td> 2021-09-12 / 22:12 </td>
+									</tr>
+									<tr>
+										<td> AGENCE </td>
+										<td> 4 </td>
+										<td> 14 </td>
+										<td> 2021-10-20 / 16:55 </td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<div id="#dbContentTable" class="contentDivDB invisibleDiv">
+						<table id="Table_DatabasedbContentTable" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> NUMERO DE COMPTE </th>
+									<th> DEPOSITEUR </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> B2985 </td>
+									<td> BI56003940340934 </td>
+									<td> MATUNGULU TUYI </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#dbInformationTable" class="contentDivDB invisibleDiv">
+						<table id="Table_DatabasedbInformationTable" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> NUMERO DE COMPTE </th>
+									<th> DEPOSITEUR </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td> B2985 </td>
+									<td> BI56003940340934 </td>
+									<td> MATUNGULU TUYI </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div id="#OperationDRVL" class="Operations contentDiv invisibleDiv">
+			<div id="HeaderField"><span>OPERATIONS FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span id="Dette" class="jsDivElementOperation sidebarFieldMenu activeNav-clientmenu"> <i class="fas fa-book"></i> Dette </span>
+					<span id="Dépôt" class="jsDivElementOperation sidebarFieldMenu"> <i class="fas fa-book"></i> Dépôt </span>
+					<span id="Retrait" class="jsDivElementOperation sidebarFieldMenu"> <i class="fas fa-book"></i> Retrait </span>
+					<span id="Virement" class="jsDivElementOperation sidebarFieldMenu"> <i class="fas fa-book"></i> Virement </span>
+					<span id="SettingNativeOperation" class="jsDivElementOperation sidebarFieldMenu"> <i class="fas fa-cog"></i> Paramêtre </span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div id="#Dette" class="contentDivOperation bodyFieldContentDiv">
+						<table id="Table_OperationDRVLDette" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> NUMERO DE COMPTE </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> B2985 </td>
+									<td> BI56003940340934 </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#Dépôt" class="contentDivOperation bodyFieldContentDiv invisibleDiv">
+						<table id="Table_OperationDRVLDepot" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> NUMERO DE COMPTE </th>
+									<th> DEPOSITEUR </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> B2985 </td>
+									<td> BI56003940340934 </td>
+									<td> MATUNGULU TUYI </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#Retrait" class="contentDivOperation bodyFieldContentDiv invisibleDiv">
+						<table id="Table_OperationDRVLRetrait" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> TYPE RETRAIT </th>
+									<th> NUMERO DE COMPTE </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> B2985 </td>
+									<td> CHEQUE </td>
+									<td> BI56003940340934 </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#Virement" class="contentDivOperation bodyFieldContentDiv invisibleDiv">
+						<table id="Table_OperationDRVLVirement" class="_table">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> COMPTE SOURCE </th>
+									<th> COMPTE DESTINATEUR</th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> AGENCE </th>
+									<th> AGENT </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tableTR">
+									<td> B2985 </td>
+									<td> BI56003940340934 </td>
+									<td> BI56009485845773 </td>
+									<td> 450 600 </td>
+									<td> 450 450 </td>
+									<td> BUJUMBURA </td>
+									<td> G56890 </td>
+									<td> 2020-12-24 </td>
+									<td> 18:57 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#SettingNativeOperation" class="contentDivOperation bodyFieldContentDiv invisibleDiv">
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span>  DÉPÔT </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> RETRAIT </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> CREDIT </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> VIREMENT </span>					
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> DECOUVERT BANCAIRE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LES DÉPÔTS VIA COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LES RETRAITS VIA COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LES CREDITS VIA COMPTE MOBILE </span>						
+						</div>
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="B456">
+							<span> LES VIREMENTS VIA COMPTE MOBILE </span>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#Report" class="Activity contentDiv invisibleDiv">
+			<div id="HeaderField"><span>RAPPORT FIELD</span></div>
+		</div>
+		<div id="#Chat" class="Activity contentDiv invisibleDiv">
+			<div id="HeaderField"><span>MESSAGE FIELD</span></div>
+		</div>
+		<div id="#MyAccountSetting" class="Activity contentDiv invisibleDiv">
+			<div id="HeaderField"><span>MON COMPTE FIELD</span></div>
+			<div class="BodyFieldAgent">
+				<div class="BodyFieldDiv-Menu">
+					<span id="AccountSettingChat" class="jsDivElementSettingAccount sidebarFieldMenu activeNav-clientmenu"> <i class="fas fa-users"></i> Chat </span>
+					<span id="AccountSettingPrivacy" class="jsDivElementSettingAccount sidebarFieldMenu"> <i class="fas fa-user"></i> Confidentialité </span>
+					<span id="AccountSettingCog" class="jsDivElementSettingAccount sidebarFieldMenu"> <i class="fas fa-cog"></i> Paramêtre </span>
+				</div>
+				<div class="BodyFieldDiv-Body">
+					<div id="#AccountSettingChat" class="contentDivMyAccountSetting bodyFieldContentDiv">
+						<div class="CompteMobileDiv">
+							<input type="checkbox" class="checkbox-table" value="">
+							<span> NOTIFICATION MESSAGE </span>						
+						</div>
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> CHANGER LE NOM D'UTILISATEUR POUR LE CHAT </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextGeneralForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="#AccountSettingPrivacy" class="contentDivMyAccountSetting bodyFieldContentDiv invisibleDiv">
+						<div class="form-create-client">
+							<div class="form-header">
+								<span> NOM D'UTILISATEUR ET MOTS DE PASSE </span>
+							</div>
+							<div class="form-body">							
+								<form>
+									<div class="form-body-Input">
+										<input type="text" name="" class="InputTextGeneralForm">
+										<input type="text" name="" class="InputTextGeneralForm">
+									</div>
+									<div class="form-body-Button">
+										<input type="submit" name="" class="InputButtonForm" value="ENVOYER">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="#AccountSettingCog" class="contentDivMyAccountSetting bodyFieldContentDiv invisibleDiv">
+						<div id="AccountSettingSelectingDiv">
+							<div class="CompteMobileDiv">
+								<input type="checkbox" class="checkbox-table" value="">
+								<span> NOTIFICATION SON </span>						
+							</div>						
+						</div>
+						<div class="RepresentationDataDiv">
+							<div class="RepresentationDataRow">
+								<div class="RepresentationDataRowTitle"> NOM </div>
+								<i class="fas fa-exchange-alt"></i>
+								<div class="RepresentationDataRowDefinition"> ATIBU DAN SILENGE </div>
+							</div>
+							<div class="RepresentationDataRow">
+								<div class="RepresentationDataRowTitle"> NOM </div>
+								<i class="fas fa-exchange-alt"></i>
+								<div class="RepresentationDataRowDefinition"> ATIBU DAN SILENGE </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="#Setting" class="Setting contentDiv invisibleDiv">
+			<div id="HeaderField"><span>PARAMËTRE FIELD</span></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="Dashboard.js"></script>
+	<script type="text/javascript" src="D:\PROJET PROGRAMMING\BankApp\FrontEnd\_All\appMenu.js"></script>
+</body>
+</html>

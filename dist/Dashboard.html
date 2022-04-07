@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bank </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Others.css">
+	<link rel="stylesheet" type="text/css" href="Dashboard.css">
+	<link rel="stylesheet" type="text/css" href="Dashboard_Help.css">
+</head>
+<body>
+	<nav>
+		<section id="navSectionOne">
+			<div id="navPartyOne">
+				<div>
+					<img id="agentProfileImg" src="Avatar/avatar12.png">
+					<div id="agentProfileDetail">
+						<h3> ATIBU DAN SILENGE </h3>
+						<p> Administrator </p>
+					</div>
+				</div>
+			</div>
+			<div id="SelectedClient">
+				<i class="fas fa-user-tie"></i>
+				<select id="selectedCardAccountCurrentClient">
+						<option>BI560093489344</option>
+						<option>BI560098493843</option>
+				</select>
+			</div>
+			<div id="navPartyTwo">
+				<div class="loader navPartyTwoOption"></div>
+				<div class="navPartyTwoOption">
+					<button class="NotificationMessage" id="DebtPayToday">
+						<i class="fas fa-credit-card NotificationMessage_Text"></i>
+						<span class="NotificationMessage_Number">55</span>
+					</button>
+					<div class="DropBox invisibleDiv" id="#DebtPayToday">
+						<div class="DropBox-Content">
+							<div class="DropBox-Head"><span>DETTES</span></div>
+							<div class="DropBox-Body">
+								<div class="DropBox-Body-Item CreditItem">
+									<div><i class="fas fa-credit-card dgr"></i></div>
+									<div>
+										<h3>LILI NDAMULOLOGWABO JURI</h3>
+										<span>ID : BU4570</span>
+										<span>450 000</span>
+										<span>125 000</span>
+										<span>2021-02-13 / 14:46</span>
+										<span>2021-07-22 / 16:00</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item CreditItem">
+									<div><i class="fas fa-credit-card blu"></i></div>
+									<div>
+										<h3>DANIEL WAKWETU </h3>
+										<span>ID : BU1000</span>
+										<span>600 000</span>
+										<span>600 000</span>
+										<span>2021-02-13 / 14:46</span>
+										<span>2021-07-22 / 16:00</span>
+									</div>
+								</div>
+							</div>
+							<div class="DropBox-Foot" id=""><span>Actualiser</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="navPartyTwoOption">
+					<button class="NotificationMessage" id="TodoListButton">
+						<i class="fas fa-book NotificationMessage_Text"></i>
+						<span class="NotificationMessage_Number">12</span>
+					</button>
+					<div class="DropBox invisibleDiv" id="#TodoListButton">
+						<div class="DropBox-Content">
+							<div class="DropBox-Head"><span>Taches</span></div>
+							<div class="DropBox-Body">
+								<div class="DropBox-Body-Item TodoItem">
+									<div><i class="fas fa-times dgr"></i></div>
+									<div>
+										<h3>Une Erreur Des Données Trouver</h3>
+										<span>
+											2022-10-12 / 23:10
+											<i class="fas fa-exchange-alt"></i>
+											2022-10-13 / 10:30
+										</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item TodoItem">
+									<div><i class="fas fa-check blu"></i></div>
+									<div>
+										<h3>Appeler Un Client Pour Un Brefing</h3>
+										<span>
+											2022-10-12 / 23:10
+											<i class="fas fa-exchange-alt"></i>
+											2022-10-13 / 10:30
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="DropBox-Foot">
+								<form id="TodoForm">
+									<input type="text" name="">
+									<input type="date" name="">
+									<button class="btnble">
+										<i class="fas fa-download"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="navPartyTwoOption">
+					<button class="NotificationMessage" id="NotificationMessage_Chat">
+						<i class="fas fa-comment NotificationMessage_Text"></i>
+						<span class="NotificationMessage_Number">12</span>
+					</button>
+					<div class="DropBox invisibleDiv" id="#NotificationMessage_Chat">
+						<div class="DropBox-Content">
+							<div class="DropBox-Head"><span>Messages</span></div>
+							<div class="DropBox-Body">
+
+								<div class="DropBox-Body-Item-Chat">
+									<div class="DropBox-Body-Item-Chat-Icon">
+										<!-- <i class="fas fa-user"></i> -->
+										<img src="Avatar/avatar11.jpg">
+									</div>
+									<div class="DropBox-Body-Item-Chat-Detail">
+										<div><h3>Judith Kalimumbalo</h3><h4>15h50</h4></div>
+										<span>Je Vais Commence Le Boulot Après ...</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item-Chat">
+									<div class="DropBox-Body-Item-Chat-Icon">
+										<!-- <i class="fas fa-user"></i> -->
+										<img src="Avatar/avatar19.jpg">
+									</div>
+									<div class="DropBox-Body-Item-Chat-Detail">
+										<div><h3>Vivien Mutokambali</h3><h4>09h22</h4></div>
+										<span>Essayer De Me Rammener Les Documents.</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item-Chat">
+									<div class="DropBox-Body-Item-Chat-Icon">
+										<!-- <i class="fas fa-user"></i> -->
+										<img src="Avatar/avatar17.jpg">
+									</div>
+									<div class="DropBox-Body-Item-Chat-Detail">
+										<div><h3>Dan Atibu</h3><h4>10h34</h4></div>
+										<span>N'Importe Quoi Seulement.</span>
+									</div>
+								</div>
+
+							</div>
+							<div class="DropBox-Foot" id="viewAllMessageChat"><span>View All</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="navPartyTwoOption">
+					<button class="NotificationMessage" id="NotificationMessage_Notif">
+						<i class="fas fa-bell NotificationMessage_Text"></i>
+						<span class="NotificationMessage_Number">23</span>
+					</button>
+					<div class="DropBox invisibleDiv" id="#NotificationMessage_Notif">
+						<div class="DropBox-Content">
+							<div class="DropBox-Head"><span>Notification / Logs</span></div>
+							<div class="DropBox-Body">
+								<div class="DropBox-Body-Item">
+									<div><i class="fas fa-times dgr"></i></div>
+									<div>
+										<h3>Une Erreur Des Données Trouver</h3>
+										<span>Table : AGENCE</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item">
+									<div><i class="fas fa-bookmark blu"></i></div>
+									<div>
+										<h3>Lien Enregistrer Pour Plus Tard</h3>
+										<span>https://Bank-Orm/Users/</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item">
+									<div><i class="fas fa-user-plus grn"></i></div>
+									<div>
+										<h3>Nouveau Client Enregistrer</h3>
+										<span>NDAMBAKA ASSUMALI DIEUDONNE</span>
+									</div>
+								</div>
+								<div class="DropBox-Body-Item">
+									<div><i class="fas fa-exclamation-triangle yel"></i></div>
+									<div>
+										<h3>Service De Chat Hors Ligne</h3>
+										<span>Cause : Multi Processing Probleme</span>
+									</div>
+								</div>
+							</div>
+							<div class="DropBox-Foot" id="viewAllNotification"><span>View All</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="navPartyTwoOption">
+					<button id="logoutButton">DECONNEXION</button>
+				</div>
+			</div>
+		</section>
+		<section id="navSectionTwo">
+			<div id="homeField" class="sidebarOption activeNavElement_0">
+				<i class="fas fa-home"></i> <span>Home</span>
+			</div>
+			<div id="clientField" class="sidebarOption">
+				<i class="fas fa-user"></i> <span>Client</span>
+			</div>
+			<div id="agentField" class="sidebarOption">
+				<i class="fas fa-user-tie"></i> <span>Agent</span>
+			</div>
+			<div id="agenceField" class="sidebarOption">
+				<i class="fas fa-home"></i> <span>Agence</span>
+			</div>
+			<div id="databaseField" class="sidebarOption">
+				<i class="fas fa-database"></i> <span>Database</span>
+			</div>
+			<div id="liveField" class="sidebarOption">
+				<i class="fas fa-server"></i> <span>Live / Logs</span>
+			</div>
+			<div id="ModelsCreation" class="sidebarOption">
+				<i class="fas fa-table"></i> <span>Modal</span>
+			</div>
+			<div id="Operation" class="sidebarOption">
+				<i class="fas fa-table"></i> <span>Opération</span>
+			</div>
+			<div id="statisticField" class="sidebarOption">
+				<i class="fas fa-chart-pie"></i> <span>Statistique</span>
+			</div>
+			<div id="settingField" class="sidebarOption">
+				<i class="fas fa-cog"></i> <span>Paramêtre</span>
+			</div>	
+		</section>
+	</nav>
+	<div id="bodyDiv">
+		<div id="mainContentDiv">
+			<!-- <div class="ModalArea">
+				<div id="HomeModal" class="ModalAreaContent ModalAnnimation">
+					<div class="ModalHead"><span class="ModalHeadText">COMPTE DE DEPOT / LOG</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div> -->
+			<div class="ModalArea">
+				<div id="AccountBankModalCreate" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">CREATTION D'UN COMPTE INTERNE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+						<input class="form_0_input" type="text" name="">
+						<input class="form_0_input" type="text" name="">
+						<input class="form_0_input" type="text" name="">
+						<input class="form_0_input" type="text" name="">
+						<input class="form_0_input" type="text" name="">
+						<input class="form_0_input" type="text" name="">
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="HomeModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">COMPTE DE DEPOT / LOG</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+							<span id="AccountBankEdit" class="AccountBankDetails activeNavElement_0"><i class="fas fa-edit"></i>MODIFIER</span>
+							<span id="AccountBankLogs" class="AccountBankDetails"><i class="fas fa-table"></i>LOGS</span>
+						</div>
+						<div class="ModalSetTime">
+							<div class="TimeSetter">
+								<input type="date" name="">
+								<span>A</span>
+								<input type="date" name="">
+							</div>
+						</div>
+					</div>
+					<div class="ModalBody">
+						<div id="#AccountBankEdit" class="AccountBankEdit_ AccountBankDetailsDiv">
+							<div id="AccountBankEditBalance">
+								<div class="IOOpersationAccountBankDiv" id="IOOpersationAccountBankDiv_One">
+									<div id="AmountAddToAccountBankDiv">
+										<span>ENTRER DE FOND</span>
+										<input type="number" name="AmountAddToAccountBank" id="AmountAddToAccountBank" placeholder="Montant A Ajouter Sur Le Compte ...">
+										<i class="fas fa-plus"></i>
+									</div>
+									<div class="ShortText">
+										<div class="ShortTextHeader"><span>DESCRIPTION DE L'ENTRER</span></div>
+										<div class="ShortTextBody">
+											<textarea class="ShortTextBodyInput" rows="15"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="IOOpersationAccountBankDiv" id="IOOpersationAccountBankDiv_Two">
+									<div id="AmountSubToAccountBankDiv">
+										<span>SORTIE DE FOND</span>
+										<input type="number" name="AmountSubToAccountBank" id="AmountSubToAccountBank" placeholder="Montant A Retirer Sur Le Compte ...">
+										<i class="fas fa-plus"></i>
+									</div>
+									<select id="AccountBankMotifSelected">
+										<option> CHARGEMENT GUICHET </option>
+										<option> PAIEMENT AGENTS </option>
+									</select>
+									<div class="ShortText">
+										<div class="ShortTextHeader"><span>DESCRIPTION DE SORTIE</span></div>
+										<div class="ShortTextBody">
+											<textarea class="ShortTextBodyInput" rows="15"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="AccountBankEditForm">
+								<form class="form_1">
+									<div class="form_1_head"><span>CREATION D'UN MOTIF</span></div>
+									<div class="form_1_body">
+										<input class="form_1_input" type="text" name="">
+										<select class="select_input_multiple" multiple>
+											<option> PAIEMENT AGENTS </option>
+											<option> CHARGEMENT GUICHET </option>
+											<option> PAIEMENT AGENTS </option>
+											<option> CHARGEMENT GUICHET </option>
+										</select>
+									</div>
+									<button class="form_1_Button">SAVE</button>
+								</form>
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>								
+							</div>
+						</div>
+						<div id="#AccountBankLogs" class="AccountBankDetailsDiv invisibleDiv">
+							<div id="IOOpersationAccountBankTable">
+								<table class="_table_0">
+									<thead>
+										<tr>
+											<th> MONTANT</th>
+											<th> RESTE EN COMPTE</th>
+											<th> DATE </th>
+											<th> HEURE </th>
+											<th> AGENT </th>
+											<th> AGENCE </th>
+											<th> RAISON </th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> BUJUMBURA </td>
+											<td> CHARGEMENT COMPTE GUICHET</td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> BUKAVU </td>
+											<td> PAIEMENT PERSONNELS </td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> KINSHASA </td>
+											<td> PAIEMENT ELECTRICITE</td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>
+											<td> BD567890 </td>
+											<td> GOMA </td>
+											<td> COMPENSATION DES PERTES</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="IOOpersationAccountBankMotif">
+								<pre>
+									Dette:
+										- Numero De Compte
+										- Montant
+										- Motif
+										- Echeance
+										- Validation : If The Loan Is Already allow By The Agence Chef
+										- Pay		 : Boolean : If Is Payed Or Not
+										- Type Dette:
+											- Vieux Mandat
+											- Le Credit Amortisable (Credit à la consommation , Credit d'un Bien Immodbilier )
+											- Le Credit Au Taux Révisable
+											- Le Credit Modulable
+											- Le Credit à Remboursement de Capital Constant
+											- Le Credit à Taux Fixe et à échéance Progressive
+											- Le Credit In Fine
+											- Le Credit Relais
+											- Le Credit Sur Gage
+
+										====================================
+										- Agent Guichet Or Application
+									Other:
+										- Etc ...
+								</pre>
+							</div>
+						</div>		
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="AgentHead" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">OPERATION L'AGENT</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+							<div class="TimeSetter">
+								<input type="date" name="">
+								<span>A</span>
+								<input type="date" name="">
+							</div>
+						</div>
+					</div>
+					<div class="ModalBody">
+						<table class="_table_0">
+									<thead>
+										<tr>
+											<th> MONTANT</th>
+											<th> RESTE EN COMPTE</th>
+											<th> DATE </th>
+											<th> HEURE </th>
+											<th> AGENT </th>
+											<th> AGENCE </th>
+											<th> RAISON </th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> BUJUMBURA </td>
+											<td> CHARGEMENT COMPTE GUICHET</td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> BUKAVU </td>
+											<td> PAIEMENT PERSONNELS </td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> BD567890 </td>			
+											<td> KINSHASA </td>
+											<td> PAIEMENT ELECTRICITE</td>
+										</tr>
+										<tr>
+											<td> 456 000 </td>
+											<td> 456 000 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>
+											<td> BD567890 </td>
+											<td> GOMA </td>
+											<td> COMPENSATION DES PERTES</td>
+										</tr>
+									</tbody>
+						</table>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="AgenceModalCreate" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">CREATTION D'UN AGENCE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+						<form class="ModalForm">
+							<div class="ModalFormContent">
+								<input class="InputKindModal" type="text" name="">
+								<input class="InputKindModal" type="text" name="">
+								<input class="InputKindModal" type="text" name="">
+								<input class="InputKindModal" type="file" name="">
+							</div>
+						</form>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="AgenceModalStatistic" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">STATISTIQUE DE L'AGENCE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="LiveServerDetail" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">LIVE SERVER / LOGS </span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="ModalAll_Logs_Saved" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">TOUTS LES ENREGISTREMENTS / REQUETE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+							<span id="LiveServerLog_OwnLogs" class="LiveServerLog_LogsOptions activeNavElement_0">
+								<i class="fas fa-user-tie"></i> MON COMPTE
+							</span>
+							<span id="LiveServerLog_OthersLogs" class="LiveServerLog_LogsOptions ">
+								<i class="fas fa-users"></i> AUTRES
+							</span>
+						</div>
+						<div class="ModalSetTime">
+							<div class="TimeSetter">
+								<input type="date" name="">
+								<span>A</span>
+								<input type="date" name="">
+							</div>
+						</div>
+					</div>
+					<div class="ModalBody">
+						<div id="#LiveServerLog_OwnLogs" class="LiveServerLog_LogsTable">
+							<table class="_table_0">
+								<thead>
+									<tr>
+										<th> TYPE </th>
+										<th> IP </th>
+										<th> METHODE </th>
+										<th> EQUIPMENT </th>
+										<th> SYSTEME </th>
+										<th> URL </th>
+										<th> NAVIGATEUR </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> INTERNE </td>
+										<td> 167.654.232.100 </td>
+										<td> POST </td>
+										<td> PC </td>			
+										<td> WINDOWS </td>			
+										<td> ./Create_Agent/Form-Post/ </td>
+										<td> MOZILLA </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="#LiveServerLog_OthersLogs" class="LiveServerLog_LogsTable invisibleDiv">
+							<table class="_table_0">
+								<thead>
+									<tr>
+										<th> TYPE </th>
+										<th> IP </th>
+										<th> METHODE </th>
+										<th> EQUIPMENT </th>
+										<th> SYSTEME </th>
+										<th> URL </th>
+										<th> NAVIGATEUR </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> INTERNE </td>
+										<td> 200.14.88.30 </td>
+										<td> GET </td>
+										<td> PHONE </td>			
+										<td> ANDROID </td>			
+										<td> ./Create_Agent/Form-Post/ </td>
+										<td> OPERA </td>
+									</tr>
+								</tbody>
+							</table>							
+						</div>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="ModelObjectModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">MODIFICATION D'UN OBJECT</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+						<div id="ModelModalArea">
+							<div id="ModelModalArea_1">
+								<form class="form_1">
+									<div class="form_1_head"><span>MODIFICATION DE L'OBJECT ...</span></div>
+									<div class="form_1_body">
+										<input class="form_1_input" type="text" name="">
+									</div>
+									<div>
+										<button class="form_1_Button">SAVE</button>								
+									</div>
+								</form>
+							</div>
+							<div id="ModelModalArea_2">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td> ADMINISTRATEUR </td>
+											<td> ATIBU </td>
+											<td> DAN </td>
+											<td> 5600374 </td>
+											<td> 2021-12-10</td>
+											<td> 11:22 </td>
+										</tr>
+											<tr>
+											<td> ADMINISTRATEUR </td>
+											<td> JONAS </td>
+											<td> NDUKI </td>
+											<td> 5600374 </td>
+											<td> 2021-12-10</td>
+											<td> 22:05 </td>
+										</tr>
+										<tr>
+											<td> ADMINISTRATEUR </td>
+											<td> MULIRO </td>
+											<td> JAMPYMPY </td>
+											<td> 5600374 </td>
+											<td> 2021-12-10</td>
+											<td> 09:34 </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="TypeConfigModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">CONFIGURATION ET MODIFICATION</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+							<span id="AddDetailOnTypeAccountClient" class="TypeConfigModalOption activeNavElement_0">
+								<i class="fas fa-edit"></i>TYPE DE COMPTE</span>
+							<span id="AddDetailOnTypeCurrency" class="TypeConfigModalOption">
+								<i class="fas fa-edit"></i>TYPE DE MONNAIE</span>
+						</div>
+						<div class="ModalSetTime"></div>
+					</div>
+					<div class="ModalBody">
+						<div id="#AddDetailOnTypeAccountClient" class="TypeConfigModalOptionDiv">
+							<select multiple="" class="select_input_multiple">
+								<option> RDC </option>
+								<option> RWANDA </option>
+								<option> BURUNDI </option>
+							</select>
+							<div>
+								<form class="form_3">
+									<div class="form_3_body">
+										<p>
+											<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+											<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+										</p>
+										<p>
+											<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+											<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+										</p>
+										<p>
+											<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+											<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+										</p>
+									</div>
+									<p>
+										<button class="btnble">ENREGISTRER LES DETAILS</button>
+									</p>
+								</form>
+							</div>
+						 </div>
+						<div id="#AddDetailOnTypeCurrency" class="TypeConfigModalOptionDiv invisibleDiv">
+							<select multiple="" class="select_input_multiple">
+								<option> FRANC CONGOLAIS </option>
+								<option> DOLLARD AMERICAIN </option>
+								<option> EURO </option>
+							</select>
+							<div>
+								<form class="form_3">
+									<div class="form_3_body">
+										<p>
+											<label for="">NOM DU PRODUIT</label>
+											<textarea rows="25">{1 : 1500 , 4 : 2000 , 7 : 3400}</textarea>
+										</p>
+									</div>
+									<p>
+										<button class="btnble">ENREGISTRER LES DETAILS</button>
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="ChatModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">MESSAGE - CHAT</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+							<span id="mainUIChat" class="ModalOption_chat activeNavElement_0">
+								<i class="fas fa-comment"></i>CHAT
+							</span>
+							<span id="settingUIChat" class="ModalOption_chat">
+								<i class="fas fa-search-plus"></i>FILTRE
+							</span>
+						</div>
+						<div class="ModalSetTime">
+							<form id="formFilterChatAgentID">
+								<i class="fas fa-search"></i>
+								<input type="text" name="" placeholder="Rechercher ...">
+							</form>
+						</div>
+					</div>
+					<div class="ModalBody" id="ChatModalBody">
+						<div id="#mainUIChat" class="ModalOption_chatDiv">
+							<div id="ChatModalHeadInfo">
+								<h2 id="ChatDiscussionDivArea_Contacts_Title"> DISCUSSION </h2>
+								<h3 id="ChatDiscussionDivArea_Contacts_Name">ATIBU DAN SILENGE CALEB</h3>
+								<div id="ChatDiscussionDivArea_Contacts_Status">
+									<span class="GreenCircle" id="OnlineColorStatus"></span>
+									<h4>Online</h4>
+								</div>
+							</div>
+							<hr class="ModalSeparator">
+							<div id="ChatDiscussionDivArea">
+								<div id="ChatDiscussionDivArea_Contacts">
+									<div class="ItemContactList">
+										<div class="ItemContact" id="5694">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar12.png" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">ATIBU DAN SILENGE CALEB </h3>
+													<h4 class="ItemContactMsg">Retrouver Moi A La Maison Après Le Boulot ...</h4>
+													<span class="ItemContactMsgMoment">2021-05-13 / 12:04</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">4</span>
+												</div>
+											</div>
+										</div>
+										<div class="ItemContact">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar4.png" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">JORDI KALIMUMBALO MBURUGU</h3>
+													<h4 class="ItemContactMsg">Fait Toi Plaisir Brother </h4>
+													<span class="ItemContactMsgMoment">2021-03-22 / 10:11</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">2</span>
+												</div>
+											</div>
+										</div>
+										<div class="ItemContact">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar3.png" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">JAMES AMULI MUTOKA MBALI</h3>
+													<h4 class="ItemContactMsg">Rien D'Important A Siganler </h4>
+													<span class="ItemContactMsgMoment">2021-07-01 / 15:53</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">16</span>
+												</div>
+											</div>
+										</div>
+										<div class="ItemContact">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar9.png" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">ISRAEL KABUNAGWA</h3>
+													<h4 class="ItemContactMsg">Vous Passez Sans Me Saluer</h4>
+													<span class="ItemContactMsgMoment">2021-10-11 / 20:03</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">5</span>
+												</div>
+											</div>
+										</div>
+										<div class="ItemContact">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar10.png" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">JETHRON RUTAHISIRE NALDO</h3>
+													<h4 class="ItemContactMsg">J Vais Cela Sans Leurs Aides</h4>
+													<span class="ItemContactMsgMoment">2021-11-11 / 21:33</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">1</span>
+												</div>
+											</div>
+										</div>
+										<div class="ItemContact">
+											<div class="ItemContactProfilDiv">
+												<img src="Avatar/avatar11.jpg" class="ItemContactProfil">
+											</div>
+											<div class="ItemContactMainContent">
+												<div class="ItemContactInfo">
+													<h3 class="ItemContactName">JONATHAN SIBETU KIBUWA</h3>
+													<h4 class="ItemContactMsg">Sans Probleme On Le Feras </h4>
+													<span class="ItemContactMsgMoment">2021-12-07 / 22:13</span>
+												</div>
+												<div class="ItemContactDetail">
+													<span class="ItemContactMsgNbr">3</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="ChatDiscussionDivArea_Messages">
+									<div id="ChatDiscussionDivArea_MsgContent">
+										<div class="OutSideMessage">
+											<div>
+												<p>Bonjour ca va.</p>
+												<span>09:45</span>
+											</div>
+										</div>
+										<div class="InSideMessage">
+											<div>
+												<p>
+													Ouais ca va et Toi? Mais Pour Plus D'Information Suis La Sans Probleme Grand.
+												</p>
+												<span>11:22</span>
+											</div>
+										</div>
+										<div class="OutSideMessage">
+											<div>
+												<p>
+													Le courage n'est pas l'absence de peur, mais la capacité de vaincre ce qui fait peur.
+												</p>
+												<span>12:05</span>
+											</div>
+										</div>
+										<div class="InSideMessage">
+											<div>
+												<p>
+													Ce qui compte, chez un homme, ce n'est pas la couleur de sa peau ou la texture de sa chevelure, mais la texture et la qualité de son âme.
+												</p>
+												<span>12:22</span>
+											</div>
+										</div>
+										<div class="InSideMessage">
+											<div>
+												<p>Je pense, donc je suis.</p>
+												<span>12:30</span>
+											</div>
+										</div>
+										<div class="OutSideMessage">
+											<div>
+												<p>
+													J'ai le rêve qu'un jour mes quatre enfants vivront dans une nation où ils ne seront pas jugés pour la couleur de leur peau, mais pour leur caractère.
+												</p>
+												<span>13:15</span>
+											</div>
+										</div>
+										<div class="OutSideMessage">
+											<div>
+												<p>
+													Vis simplement pour que d'autres puissent simplement vivre.
+												</p>
+												<span>13:28</span>
+											</div>
+										</div>
+									</div>
+									<form id="ChatFormMessage">
+										<textarea id="ChatFormMessageInput"></textarea>
+										<i id="ChatFormMessageButton" class="fas fa-paper-plane"></i>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div id="#settingUIChat" class="ModalOption_chatDiv invisibleDiv">
+							<div id="bodySettingChat">
+								<div id="bodySettingChatList">
+									<div>
+										<table class="_table_0">
+											<thead>
+												<tr>
+													<th> #CODE </th>
+													<th> NOM </th>
+													<th> POSTNOM </th>
+													<th> PRENOM </th>
+													<th> ONLINE </th>
+													<th> AGENCE </th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td> BI457647 </td>
+													<td> NDAYISHIMIYE </td>
+													<td> LAURANT </td>
+													<td> MIROIR </td>
+													<td> OUI </td>			
+													<td> BUJUMBURA </td>			
+												</tr>
+											<tbody>
+										</table>
+									</div>
+								</div>
+								<div id="bodySettingChatAction">
+									<img src="Avatar/avatar11.jpg">
+									<div>
+										<button class="btnble"> Add </button>
+										<button class="btndgr"> Block </button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="ViewNotifModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">NOTIFICATION</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+							<div class="TimeSetter">
+								<input type="date" name="">
+								<span>A</span>
+								<input type="date" name="">
+							</div>
+						</div>
+					</div>
+					<div class="ModalBody">
+						<table class="_table_1 textCenter">
+							<tbody>
+								<tr>
+									<td><i class="fas fa-user-plus"></i></td>
+									<td> Enregistrement D'Un Nouveau Client </td>
+									<td> MIREILLE NDALIKWA MULOMBE </td>
+									<td> 56001298 </td>
+									<td> 2021-12-10</td>
+									<td> 09:23 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="DebtModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">DETAIL SUR DETTE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+						<table class="_table_0">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> TAUX </th>
+									<th> FRAIS </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+									<th> AGENT </th>
+									<th> AGENCE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td> B456 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 2.5 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> BUJUMBURA </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 3.5 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> BUKAVU </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 1.3 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> KINSHASA </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 2.0 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> GOMA </td>			
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="ChangeAvatarModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">CHANGEMENT DE L'AVATAR</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+							<button class="btnble">Actualiser</button>
+						</div>
+					</div>
+					<div class="ModalBody">
+						<div id="AvatarList">
+							<img src="Avatar/avatar1.jpg" class="AvatarItem">
+							<img src="Avatar/avatar2.jpg" class="AvatarItem">
+							<img src="Avatar/avatar3.png" class="AvatarItem">
+							<img src="Avatar/avatar4.png" class="AvatarItem">
+							<!-- <img src="Avatar/avatar5.png" class="AvatarItem"> -->
+							<img src="Avatar/avatar6.png" class="AvatarItem">
+							<img src="Avatar/avatar7.png" class="AvatarItem">
+							<img src="Avatar/avatar8.jpg" class="AvatarItem">
+							<img src="Avatar/avatar9.png" class="AvatarItem">
+							<img src="Avatar/avatar10.png" class="AvatarItem">
+							<img src="Avatar/avatar11.jpg" class="AvatarItem">
+							<img src="Avatar/avatar12.png" class="AvatarItem">
+							<img src="Avatar/avatar14.jpg" class="AvatarItem">
+							<img src="Avatar/avatar15.jpg" class="AvatarItem">
+							<img src="Avatar/avatar16.jpg" class="AvatarItem">
+							<img src="Avatar/avatar17.jpg" class="AvatarItem">
+							<img src="Avatar/avatar18.png" class="AvatarItem">
+						</div>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="GlobalDivImageModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">IMAGE</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody GlobalDivModal">
+						<img id="GlobalImageModal" src="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar14.jpg">
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<div class="ModalArea">
+				<div id="RemplacantOperModal" class="ModalAreaContent ModalAnnimation invisibleDiv">
+					<div class="ModalHead"><span class="ModalHeadText">OPERATION EFFECTUES</span></div>
+					<hr class="ModalSeparator">
+					<div class="ModalOptionsArea">
+						<div class="ModalOptions">
+						</div>
+						<div class="ModalSetTime">
+						</div>
+					</div>
+					<div class="ModalBody">
+						<table id="" class="_table_0">
+							<thead>
+								<tr>
+									<th> #CODE </th>
+									<th> COMPTE </th>
+									<th> MONTANT HT </th>
+									<th> MONTANT TTC </th>
+									<th> TAUX </th>
+									<th> FRAIS </th>
+									<th> DATE </th>
+									<th> HEURE </th>
+									<th> AGENT </th>
+									<th> AGENCE </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td> B456 </td>
+									<td> BI56005698596890 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 2.5 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> BUJUMBURA </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> BI56005698596890 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 3.5 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> BUKAVU </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> BI56005698596890 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 1.3 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> KINSHASA </td>			
+								</tr>
+								<tr>
+									<td> B456 </td>
+									<td> BI56005698596890 </td>
+									<td> 456 000 </td>
+									<td> 456 000 </td>
+									<td> 2.0 </td>
+									<td> 456 000 </td>
+									<td> 2021-09-21 </td>
+									<td> 18:56 </td>			
+									<td> BD567890 </td>			
+									<td> GOMA </td>			
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<hr class="ModalSeparator">
+					<div class="ModalFoot">
+						<button class="btnble"> OK </button>
+						<button class="ModalCanselButton btndgr"> CANSEL </button>
+					</div>
+				</div>
+			</div>
+			<!-- ===================================== [ END LIST OF MODAL ] ==================================== -->
+
+			<div id="#homeField" class="homeField_ sidebarOptionContentDiv">
+				<div id="homeField_HeaderField" class="HeaderField"><span>HOME FIELD</span></div>
+				<div id="homeField_First">
+					<div id="mainCanvas_Div"><canvas id="mainCanvas" style="width:100%; height: 100%;"></canvas></div>
+					<div id="representationAccountBank_Div">
+						<div id="representationAccountBank_Div_Detail">
+							<div><span>DETAILS</span></div>
+							<div class="representationAccountBank_Div_Info" id="representationAccountBank_Div_InfoD">
+								<span>539 500 340 000</span>
+							</div>
+							<div class="representationAccountBank_Div_Info" id="representationAccountBank_Div_InfoC">
+								<span>539 500 340 000</span>
+							</div>
+							<div id="createBankAccount">
+								<i class="fas fa-plus"></i>
+							</div>
+						</div>
+						<div id="representationAccountBank_Div_List">
+							<div class="Account_Bank_Item">
+								<div>
+									<span class="Account_Bank_Item_Title">COMPTE DE DEPOT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen" id="2"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE RETRAIT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE VIREMENT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE DETTE</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span class="Account_Bank_Item_Title">COMPTE DE DEPOT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE RETRAIT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE VIREMENT</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+							<div class="Account_Bank_Item">
+								<div>
+									<span>COMPTE DE DETTE</span>
+									<p>568 900 000</p>
+									<p><span>ADMINISTRATOR</span>-THETHY MILOPOJU</p>
+								</div><div><i class="fas fa-pen"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="homeField_Second"><i class="fas fa-arrow-left"></i><i class="fas fa-arrow-right"></i></div>
+				<div id="homeField_Content">
+					<div class="Account_Bank_Item_Detail">
+						<div class="Account_Bank_Item_Detail_Head">
+							<i class="fas fa-file-invoice-dollar"></i>
+							<div>
+								<p>COMPTE DE DEPOT</p>
+								<p>7500 000</p>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Body">
+							<div>
+								<p>DEBUT</p>
+								<div id="Account_Bank_Item_Detail_Body_D"><span id="">485 000</span></div>
+							</div>
+							<div>
+								<p>CREDIT</p>
+								<div id="Account_Bank_Item_Detail_Body_C"><span id="">120 000</span></div>
+							</div>
+							<div>
+								<p>NOMBRE D'OPERATION</p>
+								<div id="Account_Bank_Item_Detail_Body_N"><span id="">670</span></div>
+							</div>
+							<div>
+								<p>DERNIERE DATE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_Y"><span id="">2021-10-23</span></div>
+							</div>
+							<div>
+								<p>DERNIERE HEURE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_H"><span id="">17:53</span></div>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Foot">
+							<select class="Account_Bank_Item_Detail_Foot_Select">
+								<option>DOLLARS</option>
+							</select>
+							<i class="fas fa-plus" id="5"></i>
+						</div>
+					</div>
+					<div class="Account_Bank_Item_Detail">
+						<div class="Account_Bank_Item_Detail_Head">
+							<i class="fas fa-file-invoice-dollar"></i>
+							<div>
+								<p>COMPTE DE DEPOT</p>
+								<p>7500 000</p>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Body">
+							<div>
+								<p>DEBUT</p>
+								<div id="Account_Bank_Item_Detail_Body_D"><span id="">485 000</span></div>
+							</div>
+							<div>
+								<p>CREDIT</p>
+								<div id="Account_Bank_Item_Detail_Body_C"><span id="">120 000</span></div>
+							</div>
+							<div>
+								<p>NOMBRE D'OPERATION</p>
+								<div id="Account_Bank_Item_Detail_Body_N"><span id="">670</span></div>
+							</div>
+							<div>
+								<p>DERNIERE DATE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_Y"><span id="">2021-10-23</span></div>
+							</div>
+							<div>
+								<p>DERNIERE HEURE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_H"><span id="">17:53</span></div>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Foot">
+							<span>Voir Plus Des Détails...</span>
+							<i class="fas fa-plus"></i>
+						</div>
+					</div>
+					<div class="Account_Bank_Item_Detail">
+						<div class="Account_Bank_Item_Detail_Head">
+							<i class="fas fa-file-invoice-dollar"></i>
+							<div>
+								<p>COMPTE DE DEPOT</p>
+								<p>7500 000</p>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Body">
+							<div>
+								<p>DEBUT</p>
+								<div id="Account_Bank_Item_Detail_Body_D"><span id="">485 000</span></div>
+							</div>
+							<div>
+								<p>CREDIT</p>
+								<div id="Account_Bank_Item_Detail_Body_C"><span id="">120 000</span></div>
+							</div>
+							<div>
+								<p>NOMBRE D'OPERATION</p>
+								<div id="Account_Bank_Item_Detail_Body_N"><span id="">670</span></div>
+							</div>
+							<div>
+								<p>DERNIERE DATE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_Y"><span id="">2021-10-23</span></div>
+							</div>
+							<div>
+								<p>DERNIERE HEURE D'ACCESS</p>
+								<div id="Account_Bank_Item_Detail_Body_H"><span id="">17:53</span></div>
+							</div>
+						</div>
+						<div class="Account_Bank_Item_Detail_Foot">
+							<span>Voir Plus Des Détails...</span>
+							<i class="fas fa-plus"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="#clientField" class="clientField_ gridSubdiv sidebarOptionContentDiv invisibleDiv">
+				<div id="clientField_HeaderField" class="HeaderField"><span>CLIENT FIELD</span></div>
+				<div id="clientField_Options">
+					<div>
+						<form><input type="text" name="searchClient" placeholder="Client Filtre ..."></form>
+					</div>
+					<div id="foundClientItems">
+						<span class="foundClientItem"> ATIBU DAN SILENGE </span>
+						<span class="foundClientItem"> JAMES AMULI </span>
+						<span class="foundClientItem"> ISRAEL KAB </span>
+						<span class="foundClientItem"> PARFAIT MBURU </span>
+						<span class="foundClientItem"> DIEUDONNE ASSUMALI </span>
+					</div>
+				</div>
+				<div id="clientField_ContentDiv">
+					<div id="clientField_ContentDiv_Nav">
+						<span id="Crud" class="clientSelectorNavItem activeNavElement_0"> CRUD </span>
+						<span id="Credit" class="clientSelectorNavItem"> CREDIT </span>
+						<span id="DecouvertBancaire" class="clientSelectorNavItem"> DECOUVERT BANCAIRE </span>
+						<span id="Operations" class="clientSelectorNavItem"> OPERATIONS </span>
+						<span id="Remplacants" class="clientSelectorNavItem"> REMPLACANTS </span>
+						<span id="CarnetDeCheque" class="clientSelectorNavItem"> CARNET DE CHEQUE </span>
+						<span id="CompteMobile" class="clientSelectorNavItem"> COMPTE MOBILE </span>
+						<span id="ChartClient" class="clientSelectorNavItem"> CHART </span>
+					</div>
+					<div id="">
+						<div id="#Crud" class="Crud_ clientSelectorDivItem">
+							<div id="CrudProfileClientDiv">
+								<div id="ProfilCurrentClient" img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar1.jpg" class="externalDetail">
+									<i class="fas fa-image"></i>
+									<span>PROFILE</span>
+								</div>
+								<a id="ContratCurrentClient" href="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar2.jpg" target="_blank">	
+									<div class="externalDetail">
+										<i class="fas fa-image"></i>
+										<span>CONTRAT</span>
+									</div>
+								</a>
+								<div id="IdentCardCurrentClient" img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar8.jpg" class="externalDetail">
+									<i class="fas fa-image"></i>
+									<span>CARTE D'IDENTITE</span>
+								</div>
+							</div>
+							<div id="CrudIdentityFormDiv">
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>
+							</div>
+							<div id="CrudAccountFormDiv">
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>
+							</div>
+						</div>
+						<div id="#Credit" class="Credit_ clientSelectorDivItem invisibleDiv">
+							<div id="Credit_Div_1">
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>
+							</div>
+							<div id="Credit_Div_2">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td><i class="fas fa-check"></i></td>
+											<td> B4509 </td>
+											<td> 345 000 </td>
+											<td> 2.6 </td>
+											<td> 2021-12-10</td>
+											<td> 11:22 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-times"></i></td>
+											<td> B4509 </td>
+											<td> 345 000 </td>
+											<td> 2.6 </td>
+											<td> 2021-12-10</td>
+											<td> 11:22 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-check"></i></td>
+											<td> B4509 </td>
+											<td> 345 000 </td>
+											<td> 2.6 </td>
+											<td> 2021-12-10</td>
+											<td> 11:22 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-times"></i></td>
+											<td> B4509 </td>
+											<td> 345 000 </td>
+											<td> 2.6 </td>
+											<td> 2021-12-10</td>
+											<td> 11:22 </td>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+							<div id="Credit_Div_3">
+								<div id="Credit_Div_3_Titles">
+									<span id="Credit_Div_3_Title_OK_" class="Credit_Div_3_Title activeNavElement_0">PAIE</span>
+									<span id="Credit_Div_3_Title_NO_" class="Credit_Div_3_Title" >NON PAIE</span>
+								</div>
+								<div id="Credit_Div_3_ContentDivs">
+									<div id="#Credit_Div_3_Title_OK_" class="Credit_Div_3_ContentDiv">
+										<table class="_table_0">
+											<thead>
+												<tr>
+													<th> #CODE </th>
+													<th> MONTANT HT </th>
+													<th> MONTANT TTC </th>
+													<th> TAUX </th>
+													<th> FRAIS </th>
+													<th> DATE </th>
+													<th> HEURE </th>
+													<th> AGENT </th>
+													<th> AGENCE </th>
+													<th> CONTRAT </th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td> B456 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 2.5 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> BUJUMBURA </td>			
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>			
+												</tr>
+												<tr>
+													<td> B456 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 3.5 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> BUKAVU </td>			
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+												<tr>
+													<td> B456 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 1.3 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> KINSHASA </td>
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+												<tr>
+													<td> B456 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 2.0 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> GOMA </td>
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div id="#Credit_Div_3_Title_NO_" class="Credit_Div_3_ContentDiv invisibleDiv">
+										<table class="_table_0">
+											<thead>
+												<tr>
+													<th> #CODE </th>
+													<th> MONTANT HT </th>
+													<th> MONTANT TTC </th>
+													<th> TAUX </th>
+													<th> FRAIS </th>
+													<th> DATE </th>
+													<th> HEURE </th>
+													<th> AGENT </th>
+													<th> AGENCE </th>
+													<th> CONTRAT </th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td> V458 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 2.5 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> BUJUMBURA </td>			
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>			
+												</tr>
+												<tr>
+													<td> I898 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 3.5 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> BUKAVU </td>			
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+												<tr>
+													<td> B745 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 1.3 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> KINSHASA </td>
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+												<tr>
+													<td> O983 </td>
+													<td> 456 000 </td>
+													<td> 456 000 </td>
+													<td> 2.0 </td>
+													<td> 456 000 </td>
+													<td> 2021-09-21 </td>
+													<td> 18:56 </td>			
+													<td> BD567890 </td>			
+													<td> GOMA </td>
+													<td>
+														<a href=""><i class="fas fa-briefcase"></i></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="#DecouvertBancaire" class="DecouvertBancaire_ clientSelectorDivItem invisibleDiv">
+							<div id="DecouvertBancaireRepresentationDataDiv">
+								<div class="representationData">
+									<div class="representationDataHead">DECOUVERT BANCAIRE</div>
+									<div class="representationDataBody">
+										<div class="representationDataBodyItem"><span>MONTANT MIN</span><span>235 000</span></div>
+										<div class="representationDataBodyItem"><span>MONTANT RESTANT</span><span>22 000</span></div>
+										<div class="representationDataBodyItem"><span>INTERET</span><span>3.7</span></div>
+									</div>
+								</div>
+							</div>
+							<div id="DecouvertBancaireFormDiv">
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>
+							</div>
+							<div id="DecouvertBancaireLogsTableDiv">
+								<table class="_table_0">
+									<thead>
+										<tr>
+											<th> MONTANT </th>
+											<th> TAUX </th>
+											<th> DATE </th>
+											<th> HEURE </th>
+											<th> NUM AGENT </th>
+											<th> NOM AGENT </th>
+											<th> AGENCE </th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> 555 200 </td>
+											<td> 2.5 </td>
+											<td> 2021-09-21 </td>
+											<td> 18:56 </td>			
+											<td> AC889348 </td>			
+											<td> JORDI MAWILOKWA </td>			
+											<td> BUJUMBURA </td>			
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div id="#Operations" class="clientSelectorDivItem invisibleDiv">
+							<table class="_table_0">
+								<thead>
+									<tr>
+										<th> #CODE </th>
+										<th> TYPE </th>
+										<th> MONTANT HT </th>
+										<th> MONTANT TTC </th>
+										<th> TAUX </th>
+										<th> FRAIS </th>
+										<th> DATE </th>
+										<th> HEURE </th>
+										<th> AGENT </th>
+										<th> AGENCE </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> B456 </td>
+										<td> <span class="typeOperation depot"> DEP </span> </td>
+										<td> 456 000 </td>
+										<td> 456 000 </td>
+										<td> 2.5 </td>
+										<td> 456 000 </td>
+										<td> 2021-09-21 </td>
+										<td> 18:56 </td>			
+										<td> BD567890 </td>			
+										<td> BUJUMBURA </td>			
+									</tr>
+									<tr>
+										<td> B456 </td>
+										<td> <span class="typeOperation retrait"> RET </span> </td>
+										<td> 456 000 </td>
+										<td> 456 000 </td>
+										<td> 3.5 </td>
+										<td> 456 000 </td>
+										<td> 2021-09-21 </td>
+										<td> 18:56 </td>			
+										<td> BD567890 </td>			
+										<td> BUKAVU </td>			
+									</tr>
+									<tr>
+										<td> B456 </td>
+										<td> <span class="typeOperation credit"> CRE </span> </td>
+										<td> 456 000 </td>
+										<td> 456 000 </td>
+										<td> 1.3 </td>
+										<td> 456 000 </td>
+										<td> 2021-09-21 </td>
+										<td> 18:56 </td>			
+										<td> BD567890 </td>			
+										<td> KINSHASA </td>			
+									</tr>
+									<tr>
+										<td> B456 </td>
+										<td> <span class="typeOperation virement"> VIR </span> </td>
+										<td> 456 000 </td>
+										<td> 456 000 </td>
+										<td> 2.0 </td>
+										<td> 456 000 </td>
+										<td> 2021-09-21 </td>
+										<td> 18:56 </td>			
+										<td> BD567890 </td>			
+										<td> GOMA </td>			
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="#Remplacants" class="Remplacants_ clientSelectorDivItem invisibleDiv">
+							<div id="RemplacantsOptions">
+								<span id="RemplacantsOptionItem_Information" class="RemplacantsOptionItem activeNavElement_0">Information</span>
+								<span id="RemplacantsOptionItem_List" class="RemplacantsOptionItem">Liste</span>
+							</div>
+							<div id="RemplacantsOptionsDiv">
+								<div id="#RemplacantsOptionItem_Information" class="RemplacantsOptionItem_Information_ RemplacantsOptionContentDiv">
+									<form id="addAccountRepresentationForm" class="form_0">
+										<div>
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+										</div>
+										<button class="form_0_Button">SAVE</button>
+									</form>
+									<div id="viewAccountRepresentationInfo" class="representationData">
+										<div class="representationDataHead">INFORMATION DES REMPLANCANTS</div>
+										<div class="representationDataBody">
+											<div class="representationDataBodyItem"><span>TOTAL</span><span>5</span></div>
+											<div class="representationDataBodyItem"><span>HOMME</span><span>2</span></div>
+											<div class="representationDataBodyItem"><span>FEMME</span><span>3</span></div>
+											<div class="representationDataBodyItem"><span>MAX AGE</span><span>35</span></div>
+											<div class="representationDataBodyItem"><span>MIN AGE</span><span>27</span></div>
+											<div class="representationDataBodyItem">
+												<span>NOMBRE D'OPERATION (RETRAIT) </span>
+												<span>248</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="#RemplacantsOptionItem_List" class="RemplacantsOptionItem_List_ RemplacantsOptionContentDiv invisibleDiv">
+									<div id="RemplacantsOptionItem_ListItem">
+										<table class="_table_0">
+											<thead>
+												<tr>
+													<th>ACTIF</th>
+													<th>NOM</th>
+													<th>CONTACT</th>
+													<th>EMAIL</th>
+													<th>SEXE</th>
+													<th>ADRESSE</th>
+													<th>C IDEN</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar4.png">
+													<td><i class="fas fa-check"></i></td>
+													<td>SARAH MUSHANGALUSHA POKOTU</td>
+													<td>+243 98405909455</td>
+													<td>sarahmusha250@gmail.com</td>
+													<td>FEMME</td>
+													<td>Kigobe Mutanga 203</td>
+													<td img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar7.png">
+														<i class="fas fa-id-card"></i>
+													</td>
+												</tr>
+												<tr img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar1.jpg">
+													<td><i class="fas fa-times"></i></td>
+													<td>YUJIGO TULIKWAMU JANVIER</td>
+													<td>+243 8934878344</td>
+													<td>yujigogo@gmail.com</td>
+													<td>HOMME</td>
+													<td>Birere Kirambo 292</td>
+													<td img="D:\PROJET PROGRAMMING\PYTHON\Level 3\BankApp\FrontEnd\Administrator\Avatar\avatar6.png">
+														<i class="fas fa-id-card"></i>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="#CarnetDeCheque" class="CarnetDeCheque_ clientSelectorDivItem invisibleDiv">
+							<div id="CarnetDeCheque_Form_Div">
+								<form class="form_0">
+									<div>
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+										<input class="form_0_input" type="text" name="">
+									</div>
+									<button class="form_0_Button">SAVE</button>
+								</form>
+							</div>
+							<div id="CarnetDeCheque_Info_Div">
+								<div class="representationData">
+									<div class="representationDataHead">CARNET DE CHEQUE</div>
+									<div class="representationDataBody">
+										<div class="representationDataBodyItem"><span>CARNET ACTIF</span><span>3</span></div>
+										<div class="representationDataBodyItem"><span>CARNET INACTIF</span><span>11</span></div>
+										<div class="representationDataBodyItem"><span>TOTAL CARNET</span><span>14</span></div>
+									</div>
+								</div>								
+							</div>
+							<div id="CarnetDeCheque_Active_Div">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td><i class="fas fa-check"></i> <i class="fas fa-check"><i></td>
+											<td> Y9000 </td>
+											<td> 150 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560045 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-check"></i> <i class="fas fa-times"><i></td>
+											<td> B4509 </td>
+											<td> 230 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560045 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-check"></i> <i class="fas fa-check"><i></td>
+											<td> C1010 </td>
+											<td> 50 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560090 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-check"></i> <i class="fas fa-times"><i></td>
+											<td> G9087 </td>
+											<td> 90 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560011 </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="CarnetDeCheque_Inactive_Div">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td><i class="fas fa-times"></i> <i class="fas fa-times"><i></td>
+											<td> V8909 </td>
+											<td> 120 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560098 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-times"></i> <i class="fas fa-check"><i></td>
+											<td> B5009 </td>
+											<td> 30 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560055 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-times"></i> <i class="fas fa-times"><i></td>
+											<td> A4500 </td>
+											<td> 75 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560044 </td>
+										</tr>
+										<tr>
+											<td><i class="fas fa-times"></i> <i class="fas fa-check"><i></td>
+											<td> H0009 </td>
+											<td> 100 </td>
+											<td> 2021-12-10</td>
+											<td> 2022-09-23 </td>
+											<td> BI560035 </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div id="#CompteMobile" class="CompteMobile_ clientSelectorDivItem invisibleDiv">
+							<div id="CompteMobileOptions">
+								<span id="CompteMobileOptionsHome" class="CompteMobileOption activeNavElement_2">
+								<i class="fas fa-home"></i>Accueil</span>
+								<span id="CompteMobileOptionsHomeLiveServer" class="CompteMobileOption">
+									<i class="fas fa-server"></i>Live Server</span>
+							</div>
+							<div id="CompteMobileContentDiv">
+								<div id="#CompteMobileOptionsHome" class="CompteMobileOptionsHome_ CompteMobileOptionContent">
+									<div id="CompteMobileOptionsHomeForm">
+										<form class="form_2">
+											<div class="form_2_body">
+												<div class="form_2_body_item">
+													<input class="form_2_input_check" type="checkbox" name="">
+													<span class="form_2_input_text">DEPOT</span>
+												</div>
+												<div class="form_2_body_item">
+													<input class="form_2_input_check" type="checkbox" name="">
+													<span class="form_2_input_text">RETRAIT</span>
+												</div>
+												<div class="form_2_body_item">
+													<input class="form_2_input_check" type="checkbox" name="">
+													<span class="form_2_input_text">CREDIT</span>
+												</div>
+												<div class="form_2_body_item">
+													<input class="form_2_input_check" type="checkbox" name="">
+													<span class="form_2_input_text">VIREMENT</span>
+												</div>
+												<div class="form_2_body_item">
+													<input class="form_2_input_check" type="checkbox" name="">
+													<span class="form_2_input_text">BLOQUER</span>
+												</div>
+											</div>
+											<button class="form_2_Button">SAVE</button>
+										</form>	
+									</div>
+									<div id="CompteMobileOptionsHomeInfo">
+										<div class="representationData">
+											<div class="representationDataHead">INFORMATION</div>
+											<div class="representationDataBody">
+												<div class="representationDataBodyItem"><span>MARQUE</span><span>SAMSUNG</span></div>
+												<div class="representationDataBodyItem"><span>VERSION</span><span>S8</span></div>
+												<div class="representationDataBodyItem"><span>ESPACE</span><span>8Go</span></div>
+												<div class="representationDataBodyItem"><span>RAM</span><span>1.5Go</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="#CompteMobileOptionsHomeLiveServer" class="CompteMobileOptionContent invisibleDiv">
+									<div class="LiverServerContainer">
+										<div class="LiveServer_Head_Content">
+											<div><i class="fas fa-check greenC"></i><span>23 CONNEXION REUSSIE</span></div>
+											<div><i class="fas fa-times redC"></i><span>9 CONNEXION ECHOUÉE</span></div>
+										</div>
+										<div class="LiveServer_Foot_Content">
+											<div class="liveField_Console" id="liveField_ConsoleMobilPh">
+												<div class="liveField_Console_connexion">
+													<span class="requestOK">[ INTERNAL ] HTTP 203 ./GetAll-Users-Mobile/All 845700</span>
+													<i class="fas fa-download"></i>
+												</div>
+												<div class="liveField_Console_connexion">
+													<span class="requestNO">[ INTERNAL ] HTTP 404 ./GetAll-Users-Mobile/All 845700</span>
+													<i class="fas fa-download"></i>
+												</div>
+												<div class="liveField_Console_connexion">
+													<span class="requestBU">[ INTERNAL ] HTTP 500 ./GetAll-Users-Mobile/All 845700</span>
+													<i class="fas fa-download"></i>
+												</div>
+												<div class="liveField_Console_connexion">
+													<span class="requestRE">[ INTERNAL ] HTTP 303 ./GetAll-Users-Mobile/All 845700</span>
+													<i class="fas fa-download"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="#ChartClient" class="ChartClient_ clientSelectorDivItem invisibleDiv">
+							<div><canvas style="width:40%; height:120px;"></canvas></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="#agentField" class="agentField_ gridSubdiv sidebarOptionContentDiv invisibleDiv">
+				<div id="agentField_HeaderField" class="HeaderField"><span>AGENT FIELD</span></div>
+				<div id="agentField_Options">
+					<div class="sidebarContainer">
+						<span id="allAgentsSidebar" class="sidebarContainerTitle activeNavElement_2">AGENTS</span>
+						<div id="#allAgentsSidebar" class="sidebarContainerOptions">
+							<div id="sidebarContainerOptionList" class="sidebarContainerOption activeNavElement_2">
+								<i class="fas fa-list"></i>
+								<span>LISTE</span>
+							</div>
+							<div id="sidebarContainerOptionStatus" class="sidebarContainerOption">
+								<i class="fas fa-check"></i>
+								<span>STATUS</span>
+							</div>
+							<div id="sidebarContainerOptionSetting" class="sidebarContainerOption">
+								<i class="fas fa-users-cog"></i>
+								<span>PARAMETRE</span>
+							</div>
+						</div>
+					</div>
+					<div class="sidebarContainer">
+						<span id="oneAgentsSidebar" class="sidebarContainerTitle">SINGLE AGENT </span>
+						<div id="#oneAgentsSidebar" class="sidebarContainerOptions invisibleDiv">
+							<div id="sidebarContainerOptionSingleAgentAccount" class="sidebarContainerOption">
+								<i class="fas fa-user"></i>
+								<span>COMPTE</span>
+							</div>
+							<div id="sidebarContainerOptionLiveServer" class="sidebarContainerOption">
+								<i class="fas fa-server"></i>
+								<span>LIVE SERVER</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="agentField_MainContentDiv">
+					<div id="#sidebarContainerOptionList" class="agentField_ContentDiv">
+						<table class="_table_0">
+							<thead>
+								<tr>
+									<th> #MATRICULE </th>
+									<th> NOM </th>
+									<th> POST-NOM </th>
+									<th> PRE-NOM </th>
+									<th> TITRE </th>
+									<th> CONTACT </th>
+									<th> GMAIL </th>
+									<th> AGENCE </th>
+									<th> USERNAME </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td> 56009093 </td>
+									<td> MULIKO </td>
+									<td> TUTUKWALOKO </td>
+									<td> DANIEL </td>
+									<td> GUICHET </td>
+									<td> +256 62239080  </td>
+									<td> danieltutu@gmail.com </td>			
+									<td> BUJUMBURA </td>			
+									<td> DanielPC </td>			
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="#sidebarContainerOptionStatus" class="sidebarContainerOptionStatus_ agentField_ContentDiv invisibleDiv">
+						<div id="sidebarContainerOptionStatus_Options">
+							<span id="sidebarContainerOptionStatusON" class="sidebarContainerOptionStatus_Option activeNavElement_0">ONLINE</span>
+							<span id="sidebarContainerOptionStatusOFF" class="sidebarContainerOptionStatus_Option">OFFLINE</span>
+						</div>
+						<div>
+							<div id="#sidebarContainerOptionStatusON" class="sidebarContainerOptionStatus_Div">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td> <i class="fas fa-check"></i> </td>
+											<td> 56009093 </td>
+											<td> MULIKO </td>
+											<td> TUTUKWALOKO </td>
+											<td> DANIEL </td>
+											<td> GUICHET </td>
+											<td> +256 62239080  </td>
+											<td> danieltutu@gmail.com </td>			
+											<td> BUJUMBURA </td>			
+											<td> DanielPC </td>			
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="#sidebarContainerOptionStatusOFF" class="sidebarContainerOptionStatus_Div invisibleDiv">
+								<table class="_table_1 textCenter">
+									<tbody>
+										<tr>
+											<td> <i class="fas fa-times"></i> </td>
+											<td> 56009093 </td>
+											<td> MULIKO </td>
+											<td> TUTUKWALOKO </td>
+											<td> DANIEL </td>
+											<td> GUICHET </td>
+											<td> +256 62239080  </td>
+											<td> danieltutu@gmail.com </td>			
+											<td> BUJUMBURA </td>			
+											<td> DanielPC </td>			
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div id="#sidebarContainerOptionLiveServer" class="agentField_ContentDiv invisibleDiv">
+						<div class="LiverServerContainer">
+							<div class="LiveServer_Head_Content">
+								<div><i class="fas fa-check greenC"></i><span>23 CONNEXION REUSSIE</span></div>
+								<div><i class="fas fa-times redC"></i><span>9 CONNEXION ECHOUÉE</span></div>
+							</div>
+							<div class="LiveServer_Foot_Content">
+								<div class="liveField_Console">
+									<div class="liveField_Console_connexion">
+										<span class="requestOK">[ INTERNAL ] HTTP 203 ./GetAll-Users-Mobile/All 845700</span>
+										<i class="fas fa-download"></i>
+									</div>
+									<div class="liveField_Console_connexion">
+										<span class="requestNO">[ INTERNAL ] HTTP 404 ./GetAll-Users-Mobile/All 845700</span>
+										<i class="fas fa-download"></i>
+									</div>
+									<div class="liveField_Console_connexion">
+										<span class="requestBU">[ INTERNAL ] HTTP 500 ./GetAll-Users-Mobile/All 845700</span>
+										<i class="fas fa-download"></i>
+									</div>
+									<div class="liveField_Console_connexion">
+										<span class="requestRE">[ INTERNAL ] HTTP 303 ./GetAll-Users-Mobile/All 845700</span>
+										<i class="fas fa-download"></i>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div id="#sidebarContainerOptionSetting" class="sidebarContainerOptionSetting_ agentField_ContentDiv invisibleDiv">
+						<div id="sidebarContainerOptionSetting_RepresentationData">
+							<div class="representationData">
+								<div class="representationDataHead">AGENTS INFORMATION TITRE</div>
+								<div class="representationDataBody">
+									<div class="representationDataBodyItem"><span>CONNECTOR</span><span>22</span></div>
+									<div class="representationDataBodyItem"><span>AGENT COMMERCIAL</span><span>31</span></div>
+									<div class="representationDataBodyItem"><span>SERVICE CLIENT</span><span>18</span></div>
+									<div class="representationDataBodyItem"><span>GUICHET</span><span>26</span></div>
+									<div class="representationDataBodyItem"><span>CHEF D'AGENCE</span><span>13</span></div>
+									<div class="representationDataBodyItem"><span>ADMINISTRATEUR</span><span>7</span></div>
+									<div class="representationDataBodyItem"><span>TOTAL (AGENT)</span><span>95</span></div>
+								</div>
+							</div>
+							<div class="representationData">
+								<div class="representationDataHead">AGENTS INFORMATION SEXE</div>
+								<div class="representationDataBody">
+									<div class="representationDataBodyItem"><span>HOMME</span><span>68</span></div>
+									<div class="representationDataBodyItem"><span>FEMME</span><span>29</span></div>
+								</div>
+							</div>
+							<div class="representationData">
+								<div class="representationDataHead">AGENTS INFORMATION NATIONALITE</div>
+								<div class="representationDataBody">
+									<div class="representationDataBodyItem"><span>BURUNDAIS</span><span>45</span></div>
+									<div class="representationDataBodyItem"><span>CONGOLAIS</span><span>20</span></div>
+									<div class="representationDataBodyItem"><span>RWANDAIS</span><span>12</span></div>
+									<div class="representationDataBodyItem"><span>TANZANIER</span><span>14</span></div>
+								</div>
+							</div>
+						</div>
+						<div id="sidebarContainerOptionSettingAgentDivForm">
+							<form class="form_0">
+								<div>
+									<input class="form_0_input" type="text" name="">
+									<input class="form_0_input" type="text" name="">
+									<input class="form_0_input" type="text" name="">
+								</div>
+								<button class="form_0_Button">SAVE</button>
+							</form>							
+						</div>
+					</div>
+					<div id="#sidebarContainerOptionSingleAgentAccount" class="sidebarContainerOptionSingleAgentAccount_ agentField_ContentDiv invisibleDiv">
+						<div id="sidebarContainerOptionSingleAgentAccount_Head">
+							<span id="sidebarContainerOptionSingleAgentAccount_Accueil" class="sidebarContainerOptionSingleAgentAccount_Head_Option activeNavElement_0">ACCUEIL</span>
+							<span id="sidebarContainerOptionSingleAgentAccount_Statistic" class="sidebarContainerOptionSingleAgentAccount_Head_Option">STATISTIQUE</span>
+						</div>
+						<div id="sidebarContainerOptionSingleAgentAccount_Body">
+							<div id="#sidebarContainerOptionSingleAgentAccount_Accueil" class="sidebarContainerOptionSingleAgentAccount_Accueil_ sidebarContainerOptionSingleAgentAccount_BodyDiv">
+								<div id="sidebarContainerOptionSingleAgentAccount_BodyDiv_Profil">
+									<div id="AgentCurrentProfil" class="externalDetail" img="Avatar/avatar12.png"><i class="fas fa-file-contract"></i>PROFILE
+									</div>
+									<a target="_blank" href="">
+										<div class="externalDetail">
+											<i class="fas fa-file-contract"></i>CONTRAT
+										</div>
+									</a>
+									<div id="AgentCurrentCardId" class="externalDetail" img="Avatar/avatar14.jpg">
+										<i class="fas fa-id-card"></i>PIECE D'IDENTITE
+									</div>
+									<div class="externalDetail" id="externalDetail_Operations_Table">
+										<i class="fas fa-table"></i><span>OPERATIONS</span>
+									</div>	
+								</div>
+								<div id="sidebarContainerOptionSingleAgentAccount_BodyDiv_Info">
+									<div class="representationData">
+										<div class="representationDataHead">AGENT INFORMATION</div>
+										<div class="representationDataBody">
+											<div class="representationDataBodyItem"><span>MATRICULE</span><span>56003487</span></div>
+											<div class="representationDataBodyItem"><span>LAST-LOGIN</span><span>2021-03-14 / 08:34</span></div>
+											<div class="representationDataBodyItem"><span>LAST-LOGOUT</span><span>2021-03-14 / 18:10</span></div>
+										</div>
+									</div>
+
+									<form class="form_3">
+										<div class="form_3_body">
+											<p>
+												<label for="">MONTANT A RECHARGER</label>
+												<input type="text" name="" class="form-control mr-sm-3" maxlength="100" required="" id="">
+											</p>
+										</div>
+										<p><button class="btnble">EXECUTER</button></p>
+									</form>
+									<form class="form_3">
+										<div class="form_3_body">
+											<p>
+												<label for="">MONTANT A RETIRER</label>
+												<input type="text" name="" class="form-control mr-sm-3" maxlength="100" required="" id="">
+											</p>
+										</div>
+										<p><button class="btnble">EXECUTER</button></p>
+									</form>
+
+								</div>
+								<div id="sidebarContainerOptionSingleAgentAccount_BodyDiv_Form">
+									<form class="form_0">
+										<div>
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+											<input class="form_0_input" type="text" name="">
+										</div>
+										<button class="form_0_Button">SAVE</button>
+									</form>	
+								</div>
+							</div>
+							<div id="#sidebarContainerOptionSingleAgentAccount_Statistic" class="sidebarContainerOptionSingleAgentAccount_Statistic_ sidebarContainerOptionSingleAgentAccount_BodyDiv invisibleDiv">
+								<div id="sidebarContainerOptionSingleAgentAccount_Statistic_Options">
+									<span id="sidebarContainerOptionSingleAgentAccount_Statistic_Bar" class="sidebarContainerOptionSingleAgentAccount_Statistic_Option activeNavElement_0">BAR</span>
+									<span id="sidebarContainerOptionSingleAgentAccount_Statistic_Line" class="sidebarContainerOptionSingleAgentAccount_Statistic_Option">LINE</span>
+								</div>
+								<div id="sidebarContainerOptionSingleAgentAccount_Statistic_Div">
+									<div id="#sidebarContainerOptionSingleAgentAccount_Statistic_Bar" class="sidebarContainerOptionSingleAgentAccount_Statistic_Div_Content">
+										<canvas id="sidebarContainerOptionSingleAgentAccount_Statistic_Bar_" style="width: 100%;height:150px;"></canvas>
+									</div>
+									<div id="#sidebarContainerOptionSingleAgentAccount_Statistic_Line" class="sidebarContainerOptionSingleAgentAccount_Statistic_Div_Content invisibleDiv">
+										<canvas id="sidebarContainerOptionSingleAgentAccount_Statistic_Line_" style="width: 100%;height:150px;"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="#agenceField" class="agenceField_ gridSubdiv sidebarOptionContentDiv invisibleDiv">
+				<div id="agenceField_HeaderField" class="HeaderField">
+					<span>AGENCE FIELD</span>
+					<i class="fas fa-plus" id="agenceField_HeaderField_Plus"></i>
+				</div>
+				<div id="agenceField_Options">
+					<!-- <div class="AddElement">
+						<span>ENREGISTREMENT D'UN NOUVEAU AGENCE</span><i class="fas fa-plus"></i>
+					</div> -->
+					<div class="agenceField_Option">
+						<span>GOMA</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>KINDU</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>BUJUMBURA</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>BUKAVU</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>MATADI</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>KIGALI</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>BUTEMBO</span> <i class="fas fa-chart-bar"></i>
+					</div>
+					<div class="agenceField_Option">
+						<span>MASISI</span> <i class="fas fa-chart-bar"></i>
+					</div>
+				</div>
+				<div id="agenceField_ContentDiv">
+					<div id="agenceField_ContentDiv_Info">
+						<div class="representationData">
+							<div class="representationDataHead">AGENCE INFORMATION</div>
+							<div class="representationDataBody">
+								<div class="representationDataBodyItem"><span>CHEF AGENCE</span><span>1</span></div>
+								<div class="representationDataBodyItem"><span>GUICHET</span><span>3</span></div>
+								<div class="representationDataBodyItem"><span>SERVICE CLIENT</span><span>2</span></div>
+								<div class="representationDataBodyItem"><span>AGENT COMMERCIAL</span><span>3</span></div>
+								<div class="representationDataBodyItem"><span>CONNECTOR</span><span>4</span></div>
+								<div class="representationDataBodyItem"><span>TOTAL AGENT</span><span>11</span></div>
+								<div class="representationDataBodyItem"><span>DEPOT</span><span>234</span></div>
+								<div class="representationDataBodyItem"><span>RETRAIT</span><span>222</span></div>
+								<div class="representationDataBodyItem"><span>CREDIT</span><span>67</span></div>
+								<div class="representationDataBodyItem"><span>VIREMENT</span><span>90</span></div>
+								<div class="representationDataBodyItem"><span>TOTAL OPERATION</span><span>446</span></div>
+								<div class="representationDataBodyItem"><span>ADRESSE IP</span><span>145.456.90.112</span></div>
+							</div>
+						</div>
+					</div>
+					<div id="agenceField_ContentDiv_Form">
+						<form class="form_0">
+							<div>
+								<input class="form_0_input" type="text" name="">
+								<input class="form_0_input" type="text" name="">
+								<input class="form_0_input" type="text" name="">
+							</div>
+							<button class="form_0_Button">SAVE</button>
+						</form>
+						<form class="form_2">
+							<div class="form_2_body">
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">DEPOT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREDIT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">RETRAIT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">VIREMENT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREATION COMPTE</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREATION AGENT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">BLOQUER LES ACTIVITES</span>
+								</div>
+							</div>
+							<button class="form_2_Button">SAVE</button>
+						</form>
+					</div>
+					<div id="agenceField_ContentDiv_Agent">
+						<table class="_table_1 textCenter">
+							<tbody>
+								<tr>
+									<td><i class="fas fa-check"></i></td>
+									<td> 56000135 </td>
+									<td> ATIBU DAN</td>
+									<td> AC</td>
+								</tr>
+								<tr>
+									<td><i class="fas fa-times"></i></td>
+									<td> 56000135 </td>
+									<td> OLENGA NGONGOLOLO</td>
+									<td> AD </td>
+								</tr>
+								<tr>
+									<td><i class="fas fa-check"></i></td>
+									<td> 56000135 </td>
+									<td> JONATHAN KIBUWA</td>
+									<td> GU</td>
+								</tr>
+								<tr>
+									<td><i class="fas fa-times"></i></td>
+									<td> 56000135 </td>
+									<td> MYMY NDINDI</td>
+									<td> SC</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>
+			</div>
+			<div id="#databaseField" class="databaseField_ gridSubdiv sidebarOptionContentDiv invisibleDiv">
+				<div id="databaseField_HeaderField" class="HeaderField"><span>DATABASE FIELD</span></div>
+				<div id="databaseField_Options">
+					<span class=""><i class="fas fa-database"></i> COMPTE CLIENT</span>
+					<span class=""><i class="fas fa-database"></i> PAYS</span>
+					<span class=""><i class="fas fa-database"></i> VILLE</span>
+					<span class=""><i class="fas fa-database"></i> TYPE DE COMPE</span>
+					<span class=""><i class="fas fa-database"></i> AGENCE</span>
+					<span class=""><i class="fas fa-database"></i> AGENT</span>
+				</div>
+				<div id="databaseField_ContentDiv">
+					<form id="rawQueryDBFORM">
+						<input type="text" name="rawQueryDB" placeholder="SQL Query ..." autocomplete="off">
+					</form>
+					<div>
+						<div class="representationData">
+							<div class="representationDataHead">TABLE INFORMATION</div>
+							<div class="representationDataBody">
+								<div class="representationDataBodyItem"><span>RESULTAT</span><span>56</span></div>
+								<div class="representationDataBodyItem"><span>TOTAL TABLE</span><span>128</span></div>
+								<div class="representationDataBodyItem"><span>NOM TABLE</span><span>TYPE ACCOUNT</span></div>
+							</div>
+						</div>
+					</div>
+					<table class="_table_0">
+						<thead>
+							<tr>
+								<th> #CODE </th>
+								<th> TYPE </th>
+								<th> COMPTE </th>
+								<th> MONTANT HT </th>
+								<th> MONTANT TTC </th>
+								<th> TAUX </th>
+								<th> FRAIS </th>
+								<th> DATE </th>
+								<th> HEURE </th>
+								<th> AGENT </th>
+								<th> AGENCE </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> B456 </td>
+								<td> <span class="typeOperation depot"> DEP </span> </td>
+								<td> BI56005698596890 </td>
+								<td> 456 000 </td>
+								<td> 456 000 </td>
+								<td> 2.5 </td>
+								<td> 456 000 </td>
+								<td> 2021-09-21 </td>
+								<td> 18:56 </td>			
+								<td> BD567890 </td>			
+								<td> BUJUMBURA </td>			
+							</tr>
+							<tr>
+								<td> B456 </td>
+								<td> <span class="typeOperation retrait"> RET </span> </td>
+								<td> BI56005698596890 </td>
+								<td> 456 000 </td>
+								<td> 456 000 </td>
+								<td> 3.5 </td>
+								<td> 456 000 </td>
+								<td> 2021-09-21 </td>
+								<td> 18:56 </td>			
+								<td> BD567890 </td>			
+								<td> BUKAVU </td>			
+							</tr>
+							<tr>
+								<td> B456 </td>
+								<td> <span class="typeOperation credit"> CRE </span> </td>
+								<td> BI56005698596890 </td>
+								<td> 456 000 </td>
+								<td> 456 000 </td>
+								<td> 1.3 </td>
+								<td> 456 000 </td>
+								<td> 2021-09-21 </td>
+								<td> 18:56 </td>			
+								<td> BD567890 </td>			
+								<td> KINSHASA </td>			
+							</tr>
+							<tr>
+								<td> B456 </td>
+								<td> <span class="typeOperation virement"> VIR </span> </td>
+								<td> BI56005698596890 </td>
+								<td> 456 000 </td>
+								<td> 456 000 </td>
+								<td> 2.0 </td>
+								<td> 456 000 </td>
+								<td> 2021-09-21 </td>
+								<td> 18:56 </td>			
+								<td> BD567890 </td>			
+								<td> GOMA </td>			
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="#liveField" class="liveField_ sidebarOptionContentDiv invisibleDiv">
+				<div id="liveField_HeaderField" class="HeaderField">
+					<span>LIVESERVER FIELD</span>
+					<i class="fas fa-book" id="All_Logs_Saved"></i>
+				</div>
+				<div id="liveField_Options">
+					<div><span>RESPONSE 100</span><span id="R100" class="liveField_Response">12</span></div>
+					<div><span>RESPONSE 200</span><span id="R200" class="liveField_Response">364</span></div>
+					<div><span>RESPONSE 300</span><span id="R300" class="liveField_Response">120</span></div>
+					<div><span>RESPONSE 400</span><span id="R400" class="liveField_Response">99</span></div>
+					<div><span>RESPONSE 500</span><span id="R500" class="liveField_Response">44</span></div>
+				</div>
+				<div id="liveField_ContentDiv">
+					<div id="liveField_ContentDiv_Options">
+						<div id="liveField_AgenceSide" class="liveField_ContentDiv_Option">
+							<span>LOG INTERNE</span><i class="fas fa-chart-pie"></i>
+						</div>
+						<div id="liveField_ClientSide" class="liveField_ContentDiv_Option">
+							<span>LOG EXTERNE</span><i class="fas fa-chart-pie"></i>
+						</div>
+					</div>
+					<div id="liveField_ContentDiv_Consoles">
+						<div id="#liveField_AgenceSide" class="liveField_Console">
+							<div class="liveField_Console_connexion">
+								<span class="requestOK">[ INTERNAL ] HTTP 203 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestNO">[ INTERNAL ] HTTP 404 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestBU">[ INTERNAL ] HTTP 500 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestRE">[ INTERNAL ] HTTP 303 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+						</div>
+						<div id="#liveField_ClientSide" class="liveField_Console invisibleDiv">
+							<div class="liveField_Console_connexion">
+								<span class="requestNO">[ EXTERNAL ] HTTP 404 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestBU">[ EXTERNAL ] HTTP 500 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestRE">[ EXTERNAL ] HTTP 303 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+							<div class="liveField_Console_connexion">
+								<span class="requestOK">[ EXTERNAL ] HTTP 203 ./GetAll-Users-Mobile/All 845700</span>
+								<i class="fas fa-download"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="#ModelsCreation" class="ModelsCreation_ sidebarOptionContentDiv invisibleDiv">
+				<div id="ModelsCreation_HeaderField" class="HeaderField"><span>OBJECT MODAL FIELD</span></div>
+				<div id="ModelsCreation_Options">
+					<div class="ModelsCreation_Option"><span>PAYS</span></div>
+					<div class="ModelsCreation_Option"><span>VILLE</span></div>
+					<div class="ModelsCreation_Option"><span>SEXE</span></div>
+					<div class="ModelsCreation_Option"><span>NATIONALITE</span></div>
+					<div class="ModelsCreation_Option"><span>TYPE D'IDENTITE</span></div>
+					<div class="ModelsCreation_Option"><span>TYPE D'OPERATION</span></div>
+					<div class="ModelsCreation_Option"><span>TYPE DE MONNAIE</span></div>
+					<div class="ModelsCreation_Option"><span>TYPE DE COMPTE</span></div>
+					<div class="ModelsCreation_Option"><span>STATUT JURIDIQUE</span></div>
+				</div>
+				<div id="ModelsCreation_ContentDiv">
+					<div id="ModelsCreation_ContentDiv_Form">
+						<form class="form_3">
+							<div class="form_3_body">
+								<p>
+									<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+									<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+								</p>
+								<p>
+									<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+									<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+								</p>
+								<p>
+									<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+									<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+								</p>
+								<p>
+									<label for="id_NAME_OF_THE_PRODUCT">NOM DU PRODUIT</label>
+									<input type="text" name="NAME_OF_THE_PRODUCT" class="form-control mr-sm-3" maxlength="100" required="" id="id_NAME_OF_THE_PRODUCT">
+								</p>
+							</div>
+							<p>
+								<button class="btnble">ENREGISTRER</button>
+							</p>
+						</form>
+					</div>
+					<div id="ModelsCreation_ContentDiv_Info">
+						<div class="representationData" id="">
+							<div class="representationDataHead">MODEL INFORMATION</div>
+							<div class="representationDataBody">
+								<div class="representationDataBodyItem"><span>NOMBRE</span><span>56</span></div>
+								<div class="representationDataBodyItem">
+									<span>DERNIER ENREGISTREMENT</span><span>UGANDA</span>
+								</div>
+								<div class="representationDataBodyItem">
+									<span>DERNIERE DATE D'ENREGISTREMENT</span><span>2021/22/02</span>
+								</div>
+								<div class="representationDataBodyItem">
+									<span>DERNIERE PERSONNE A ENREGISTRER</span><span>56002000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="ModelsCreation_ContentDiv_ListObject">
+						<select multiple="" class="select_input_multiple">
+							<option> RDC </option>
+							<option> RWANDA </option>
+							<option> BURUNDI </option>
+						</select>
+					</div>
+				</div>
+				<div class="ModelsCreation_ContentDiv_Content">
+					<table class="_table_0">
+						<thead>
+							<tr>
+								<th> #CODE </th>
+								<th> MONTANT HT </th>
+								<th> MONTANT TTC </th>
+								<th> TAUX </th>
+								<th> FRAIS </th>
+								<th> DATE </th>
+								<th> HEURE </th>
+								<th> AGENT </th>
+								<th> AGENCE </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> B456 </td>
+								<td> 456 000 </td>
+								<td> 456 000 </td>
+								<td> 2.0 </td>
+								<td> 456 000 </td>
+								<td> 2021-09-21 </td>
+								<td> 18:56 </td>			
+								<td> BD567890 </td>			
+								<td> GOMA </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="#Operation" class="sidebarOptionContentDiv invisibleDiv">
+				<div class="HeaderField"><span>OPERATION FIELD</span></div>
+				<div id="OperationsFieldDiv">
+					<!-- <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i> -->
+					<div class="TimeSetter">
+						<input type="date" name="">
+						<span>A</span>
+						<input type="date" name="">
+					</div>
+					<div>
+						<select>
+							<option> TOUT </option>
+							<option> BUJUMBURA </option>
+							<option> GOMA </option>
+							<option> BUKAVU </option>
+							<option> UVIRA </option>
+						</select>
+					</div>
+					<div>
+						<select>
+							<option> TOUT </option>
+							<option> DEPOT </option>
+							<option> RETRAIT </option>
+							<option> VIREMENT </option>
+							<option> CREDIT </option>
+						</select>
+					</div>
+					<div>
+						<button id="OperationsFieldDiv_Button" class="btnble"> Chargement </button>
+						<button id="" class="btndgr"> Stop </button>
+					</div>
+				</div>
+				<table id="LiveOperationTable" class="_table_0">
+					<thead>
+						<tr>
+							<th> #CODE </th>
+							<th> TYPE </th>
+							<th> COMPTE </th>
+							<th> MONTANT HT </th>
+							<th> MONTANT TTC </th>
+							<th> TAUX </th>
+							<th> FRAIS </th>
+							<th> DATE </th>
+							<th> HEURE </th>
+							<th> AGENT </th>
+							<th> AGENCE </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> B456 </td>
+							<td> <span class="typeOperation depot"> DEP </span> </td>
+							<td> BI56005698596890 </td>
+							<td> 456 000 </td>
+							<td> 456 000 </td>
+							<td> 2.5 </td>
+							<td> 456 000 </td>
+							<td> 2021-09-21 </td>
+							<td> 18:56 </td>			
+							<td> BD567890 </td>			
+							<td> BUJUMBURA </td>			
+						</tr>
+						<tr>
+							<td> B456 </td>
+							<td> <span class="typeOperation retrait"> RET </span> </td>
+							<td> BI56005698596890 </td>
+							<td> 456 000 </td>
+							<td> 456 000 </td>
+							<td> 3.5 </td>
+							<td> 456 000 </td>
+							<td> 2021-09-21 </td>
+							<td> 18:56 </td>			
+							<td> BD567890 </td>			
+							<td> BUKAVU </td>			
+						</tr>
+						<tr>
+							<td> B456 </td>
+							<td> <span class="typeOperation credit"> CRE </span> </td>
+							<td> BI56005698596890 </td>
+							<td> 456 000 </td>
+							<td> 456 000 </td>
+							<td> 1.3 </td>
+							<td> 456 000 </td>
+							<td> 2021-09-21 </td>
+							<td> 18:56 </td>			
+							<td> BD567890 </td>			
+							<td> KINSHASA </td>			
+						</tr>
+						<tr>
+							<td> B456 </td>
+							<td> <span class="typeOperation virement"> VIR </span> </td>
+							<td> BI56005698596890 </td>
+							<td> 456 000 </td>
+							<td> 456 000 </td>
+							<td> 2.0 </td>
+							<td> 456 000 </td>
+							<td> 2021-09-21 </td>
+							<td> 18:56 </td>			
+							<td> BD567890 </td>			
+							<td> GOMA </td>			
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="#statisticField" class="statisticField_ sidebarOptionContentDiv invisibleDiv">
+				<div id="statisticField_HeaderField" class="HeaderField"><span>STATISTIQUE FIELD</span></div>
+				<div id="statisticField_Options">
+					<div id="statisticField_Option_TC" class="statisticField_Option">
+						<i class="fas fa-chart-pie"></i><span>TYPE DE COMPTE</span>
+					</div>
+					<div id="statisticField_Option_TO" class="statisticField_Option">
+						<i class="fas fa-chart-bar"></i><span>TYPE DES OPERATIONS</span>
+					</div>
+					<div id="statisticField_Option_TA" class="statisticField_Option">
+						<i class="fas fa-chart-bar"></i><span>TYPE DES AGENTS</span>
+					</div>
+					<div id="statisticField_Option_TM" class="statisticField_Option">
+						<i class="fas fa-chart-bar"></i><span>TYPE DES MONNAIES</span>
+					</div>
+				</div>
+				<div id="statisticField_ContentDiv">
+					<div class="TimeSetter">
+						<input type="date" name="">
+						<span>A</span>
+						<input type="date" name="">
+					</div>
+					<div class="statisticField_ContentDiv_div" id="#statisticField_Option_TC">
+						<div><canvas style="width:40%; height:120px;"></canvas></div>
+					</div>
+					<div class="statisticField_ContentDiv_div invisibleDiv" id="#statisticField_Option_TM">
+						<div><canvas style="width:40%; height:120px;"></canvas></div>
+					</div>
+					<div class="statisticField_ContentDiv_div invisibleDiv" id="#statisticField_Option_TO">
+						<div><canvas style="width:40%; height:120px;"></canvas></div>
+					</div>
+					<div class="statisticField_ContentDiv_div invisibleDiv" id="#statisticField_Option_TA">
+						<div><canvas style="width:40%; height:120px;"></canvas></div>
+					</div>
+				</div>
+			</div>
+			<div id="#settingField" class="settingField_ sidebarOptionContentDiv invisibleDiv">
+				<div id="settingField_HeaderField" class="HeaderField"><span>PARAMETRE FIELD</span></div>
+				<div id="settingField_ContentDiv">
+					<div id="settingField_ContentDiv_Info">
+						<div class="representationData" id="representationData_Own_Account">
+							<div class="representationDataHead">COMPTE INFORMATION</div>
+							<div class="representationDataBody">
+								<div class="representationDataBodyItem"><span>MATRICULE</span><span>56</span></div>
+								<div class="representationDataBodyItem"><span>BALANCE</span><span>235 000</span></div>
+								<div class="representationDataBodyItem"><span>BUREAU</span><span>KINSHASA</span></div>
+								<div class="representationDataBodyItem"><span>TITRE</span><span>ADMINISTRATEUR</span></div>
+							</div>
+						</div>
+						<div class="representationData">
+							<div class="representationDataHead">IDENTITE INFORMATION</div>
+							<div class="representationDataBody">
+								<div class="representationDataBodyItem"><span>NOM</span><span>ATIBU</span></div>
+								<div class="representationDataBodyItem"><span>POST-NOM</span><span>DAN</span></div>
+								<div class="representationDataBodyItem"><span>PRE-NOM</span><span>SILENGE</span></div>
+								<div class="representationDataBodyItem"><span>TYPE D'IDENTITE</span><span>CEPGL</span></div>
+								<div class="representationDataBodyItem"><span>NUMERO D'IDENTITE</span><span>GC45859485</span></div>
+								<div class="representationDataBodyItem"><span>ETAT-CIVIL</span><span>CELIBATAIRE</span></div>
+								<div class="representationDataBodyItem"><span>PAYS</span><span>BURUNDI</span></div>
+								<div class="representationDataBodyItem"><span>VILLE</span><span>BUJUMBURA</span></div>
+								<div class="representationDataBodyItem"><span>QUARTIER</span><span>KIGOBE</span></div>
+								<div class="representationDataBodyItem"><span>AVENUE</span><span>MUTANGA</span></div>
+								<div class="representationDataBodyItem"><span>NUMERO</span><span>873</span></div>
+								<div class="representationDataBodyItem"><span>ANNIVERSAIRE</span><span>2001-06-13</span></div>
+								<div class="representationDataBodyItem"><span>SEXE</span><span>HOMME</span></div>
+								<div class="representationDataBodyItem"><span>NATIONALITE</span><span>CONGOLAISE</span></div>
+								<div class="representationDataBodyItem"><span>EMAIL</span><span>atibudan2@gmail.com</span></div>
+								<div class="representationDataBodyItem"><span>CONTACT</span><span>+256 62239080</span></div>
+
+							</div>
+						</div>
+					</div>
+					<div id="settingField_ContentDiv_Form">
+						<div class="ModalDivButtonClick" id="TypeConfiguration">TYPE DE COMPTE / TYPE DE MONNAIE</div>
+						<div class="ModalDivButtonClick" id="ModalChangeAvatar">CHANGER L'AVATAR</div>
+						<form class="form_1">
+							<div class="form_1_head"><span>NOM D'UTILISATEUR ET MOTS DE PASSE</span></div>
+							<div class="form_1_body">
+								<input class="form_1_input" type="text" name="">
+								<input class="form_1_input" type="text" name="">
+							</div>
+							<button class="form_1_Button">SAVE</button>
+						</form>
+						<form class="form_2">
+							<div class="form_2_body">
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">SON NOTIFICATION OPERATION</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">SON NOTIFICATION MESSAGE</span>
+								</div>
+							</div>
+							<button class="form_2_Button">SAVE</button>
+						</form>
+						<form class="form_2">
+							<div class="form_2_body">
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">DEPOT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREDIT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">RETRAIT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">VIREMENT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREATION COMPTE</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">CREATION AGENT</span>
+								</div>
+								<div class="form_2_body_item">
+									<input class="form_2_input_check" type="checkbox" name="">
+									<span class="form_2_input_text">BLOQUER LES ACTIVITES</span>
+								</div>
+							</div>
+							<button class="form_2_Button">SAVE</button>
+						</form>
+					</div>
+					<div id="settingField_ContentDiv_Prefer">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2039213.4290439263!2d29.925253999999995!3d-3.3895294499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sbi!4v1627172984151!5m2!1sfr!2sbi" width="100%" height="740" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</div>
+			</div>
+			<!-- 
+			EXAMPLAIRE D'UN FIELD
+			<div id="#settingField" class="settingField_ gridSubdiv sidebarOptionContentDiv invisibleDiv">
+				<div id="settingField_HeaderField" class="HeaderField"><span>PARAMETRE FIELD</span></div>
+				<div id="settingField_Options"></div>
+				<div id="settingField_ContentDiv"></div>
+			</div>
+			-->
+		</div>
+	</div>
+</body>
+	<!-- DOWNLOADING EXTERNE FILES  -->
+
+	<!-- DOWNLOADING FONT AWAESOME LIB  -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+	<!-- DOWNLOADING JQUERY LIB  -->
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<!-- DOWNLOADING DATATABLE LIB AND MORE DEPENDENCIES  -->
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+	<script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+	<script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+	
+	<!-- DOWNLOADING TOAST LIB  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+	<!-- DOWNLOADING CHART LIB  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+
+	<!-- DOWNLOADING INTERNAL FILES  -->
+	<script type="text/javascript" src="Others.js"></script>
+	<script type="text/javascript" src="Dashboard.js"></script>
+	<script type="text/javascript" src="Chart.js"></script>
+	<!-- <script type="text/javascript" src="Chat.js"></script> -->
+</html>

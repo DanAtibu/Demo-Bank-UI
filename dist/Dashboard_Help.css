@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&display=swap');
+* {
+	font-weight: bold;
+	font-family: 'Montserrat', cursive;
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+
+:root{
+	--greenColor :#6dc05a;
+	--blueColor :#4f8bc3;
+	--yellowColor :#bbb352;
+	--redColor :#ab0008;
+	--gridColor : #EEE;
+	--blackColor : #000;
+	--whiteColor : #FFF;
+}
+#logoutButton {	background-color: #303a5f;border-radius: 5px; }
+/*======================================== GENERAL ========================================*/
+a {text-decoration: none;}
+i {color: var(--blueColor);}
+/*========================================= HIDDEN =========================================*/
+.invisibleDiv { display: none; }
+/*==========================================  ==========================================*/
+.AddElement {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border:1px solid var(--blueColor);
+	letter-spacing: .5px;
+	/*box-shadow: 0 0 1.5px var(--blueColor);*/
+	padding:7px;
+	margin-bottom: 15px;
+	/*background-color: var(--blueColor);*/
+	/*color: var(--whiteColor);*/
+	border-radius: 5px;
+}
+.AddElement i {border:1px solid var(--blueColor);padding: 5px;border-radius: 50%;cursor: pointer;}
+/*==========================================  ==========================================*/
+#navSectionTwo { font-size: 13px; }
+/*======================================= ACTIVE ELEMENT ====================================*/
+.activeNavElement_0 { border-bottom: 5px solid #4f8bc3;}
+.activeNavElement_1 {background-color: var(--gridColor);box-shadow: 0 0 1.5px;}
+.activeNavElement_2 {border-left: 6px solid var(--blueColor);box-shadow: 0 0 3px var(--blueColor);}
+.activeNavElement_3 {
+	background-color: var(--blueColor);
+	box-shadow: 0 0 3px var(--blueColor);
+	color:white;
+	border:1px solid var(--blueColor);
+	border-radius: 5px;
+	/*background-image: radial-gradient(transparent,#4f8bc3,#4f8bc3,#4f8bc3,#ffffff);*/
+}
+/*========================================== I STYLE ========================================*/
+i.redC{color:var(--redColor);}
+i.blueC{color:var(--blueColor);}
+i.greenC{color:var(--greenColor);}
+i.yellowC{color:var(--yellowColor);}
+/*========================================== TABLE N 0 =======================================*/
+.textCenter {text-align: center;}
+/*========================================== TABLE N 0 =======================================*/
+._table_0 {width: 100%;}
+._table_0 thead {
+	background-color: #4f8bc3;
+	color:#ffffff;
+}
+._table_0 thead tr th { box-shadow: 0 0 0 2px #4f8bc3;}
+._table_0 thead tr , ._table_0 tbody tr {  text-align: center; }
+._table_0 thead tr th , ._table_0 tbody tr td{ padding: 10px; }
+._table_0 tbody tr:hover {
+	background-color: #EEE;
+	cursor: pointer;
+	box-shadow: 0 0 1.5px;
+}
+.typeOperation {
+	color: white;
+	padding: 7px;
+	border-radius: 10px;
+	width: 100%;
+}
+.depot {background-color: #6dc05a;	box-shadow: 5px 5px 10px 0px #6dc05a;}
+.retrait {background-color: #4f8bc3;	box-shadow: 5px 5px 10px 0px #4f8bc3;}
+.virement {background-color: #bbb352;	box-shadow: 5px 5px 10px 0px #bbb352;}
+.credit {background-color: #ab0008;	box-shadow: 5px 5px 10px 0px #ab0008;}
+/*========================================== TABLE N 1 ==========================================*/
+._table_1 {width: 100%; }
+._table_1 tbody tr td {padding:7px 0px 7px 0px;}
+._table_1 tbody tr td i.fa-check{color:var(--greenColor);}
+._table_1 tbody tr td i.fa-times{color:var(--redColor);}
+._table_1 tbody tr:hover {background-color:var(--gridColor);box-shadow:0 0 1.5px;border-radius:5px;cursor:pointer;}
+/*===================================== CURRENT FIELD NAME ====================================*/
+.HeaderField {
+	padding: 15px 20px 15px 40px;
+	margin-bottom: 10px;
+	background-color: #4f8bc3;
+	border-radius: 5px;
+	color: var(--whiteColor);
+	letter-spacing: 3px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.HeaderField i {
+	color: var(--whiteColor);
+	cursor:pointer;
+}
+/*======================================= INPUT STYLE ========================================*/
+input:focus , textarea:focus {outline: none;border:1px solid var(--blackColor);}
+input , textarea , select {
+	width: 96%;
+	padding: 5px;
+	font-size: inherit;
+	border: 1px solid var(--blueColor);
+	letter-spacing: 1px;
+}
+input[type = checkbox] {width: auto;}
+select , select:focus {outline: none;}
+select {width: 100%;}
+.select_input_multiple , textarea {resize: none;padding:0px;}
+.select_input_multiple {width: 97.5%;margin-bottom: 8px;height: 200px;}
+.select_input_multiple option {padding: 10px;width: 100%;cursor: pointer;}
+.select_input_multiple::-webkit-scrollbar {width: 5px;background-color: var(--gridColor);}
+.select_input_multiple::-webkit-scrollbar-thumb {background-color: var(--blueColor);}
+/*======================================= FORM STYLE 0 ======================================*/
+.form_0 {margin: 0px 5px 0px 5px;}
+.form_0 div {display: flex;	flex-direction: column;justify-content: center;align-items: center;}
+.form_0_input , .form_0_Button {padding: 5px;border-radius: 3px;}
+.form_0_input {font-size: inherit;margin-bottom: 8px;}
+.form_0_Button {width: 100%;background-color:var(--blueColor);color: white;	border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;cursor: pointer;}
+/*======================================= FORM STYLE 1 ======================================*/
+.form_1 {margin: 0px 5px 20px 5px;}
+.form_1_body {display: flex;flex-direction: column;align-items: center;}
+.form_1_input , .form_1_Button , .form_1_head {padding: 5px;border-radius:3px;}
+.form_1_input {font-size: inherit;}
+.form_1_Button , .form_1_head {background-color:var(--blueColor);color: white;border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;cursor: pointer;
+}
+.form_1_head , .form_1_input {margin-bottom: 8px;}
+.form_1_Button{width: 100%;}
+/*======================================= FORM STYLE 2 ======================================*/
+.form_2 {margin: 0px 5px 0px 5px;box-shadow:inset 0 0 6px var(--blueColor);}
+.form_2_body{padding: 10px;}
+.form_2_input_check{margin-right: 20px;cursor: pointer;}
+.form_2_body_item{margin-bottom: 10px;}
+.form_2_Button {
+	width: 100%;
+	background-color:var(--blueColor);
+	color: white;
+	border:2px solid var(--blueColor);
+	box-shadow: 0 0 3px #4f8bc3;
+	cursor: pointer;
+}
+
+/*======================================= FORM STYLE 3 ======================================*/
+
+.form_3 {box-shadow:inset 0 0 8px var(--blueColor);}
+.form_3_body{padding: 30px 30px 10px 30px;display: flex;justify-content: center;flex-direction: column;}
+.form_3 p , .form_3_body p input , .form_3_body p textarea {margin-top: 5px;}
+.form_3 p button {width: 100%;}
+
+/*==================================== DATA REPRESENTATIVE ==================================*/
+
+.representationData {/*box-shadow: 0 0 2px;*/}
+.representationDataHead , .representationDataBodyItem {padding: 7px;}
+.representationDataHead {
+	background-color:var(--blueColor);
+	color: #FFF;
+}
+.representationDataBodyItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 1.5px;
+}
+
+/*==================================== REQUEST STYLE ==================================*/
+.consoleServerUI {
+	display: flex;
+	flex-direction: column;
+	background-color:#272735;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.consoleServerUI span {margin:0px 0px 5px 0px;}
+.requestOK {font-weight: bold; font-size: 18px; color:green;}
+.requestNO {font-weight: bold; font-size: 18px; color:red;}
+.requestRE {font-weight: bold; font-size: 18px; color:var(--blueColor);}
+.requestBU {font-weight: bold; font-size: 18px; color:var(--yellowColor);}
+
+/*=============================================================================================*/
+.sidebarContainerTitle , .sidebarContainerOption {
+	padding: 7px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 2px;
+}
+.sidebarContainerTitle {display: block;}
+.sidebarContainerOptions{}
+.sidebarContainerOption {margin-left: 50px;}
+.sidebarContainerOption i {margin-right: 10px;color: var(--blueColor);font-size: inherit;}
+
+
+/*===============================================================================================;*/
+.LiverServerContainer {}
+.LiveServer_Head_Content {
+	display: flex;
+	grid-area: LiveServer_Head;flex-direction: row;
+	justify-content: space-between; align-items: center;margin-bottom: 10px;
+}
+.LiveServer_Head_Content div i {margin-right: 10px;}
+.LiveServer_Foot_Content {
+	display: flex;
+	grid-area:LiveServer_Foot_Content;
+	flex-direction: column;
+}
+
+.darkUI_NAV {
+	background-color:#232729;
+	color: white;
+}
+.darkUI_BODY {
+	background-color: #272735;
+	color: #fff;
+}
+
+/*=================================  [ SHORTTEXT FIELD STYLE ] ============================================*/
+.ShortText {width: 100%;overflow-x: hidden;border:1px solid #4f8bc3;}
+.ShortTextHeader {padding: 7px; background-color: #4f8bc3; color: #FFF;}
+.ShortTextBody {display: flex;justify-content: center;align-items: center;flex-direction: column;padding: 10px;}
+.ShortTextBodyInput {max-width: 100%;min-width: 100%;border:none;}
+.ShortTextBodyInput:focus {border:none;}
+/*=================================  [ MODAL FIELD STYLE ] =================================================*/
+.TimeSetter {display: flex;justify-content:space-between;align-items: center;width: 400px;box-shadow:0 0 3px;}
+.TimeSetter input {max-width:170px;min-width: 170px;border:none;cursor: pointer;}
+/*=================================  [ MODAL FIELD STYLE ] =================================================*/
+
+.ModalArea {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/*background-color: rgba(0 ,0 ,0 ,.7);*/
+	/*overflow-x: hidden;*/
+}
+.ModalAreaContent {
+	position: fixed;
+	top:0;
+	background-color: #FFF;
+	color: #000;
+	padding: 15px 15px 10px 15px;
+	box-shadow: inset 0 0 10px var(--blueColor);
+	box-shadow: 10px 10px 30px 5px rgba(0 ,0 ,0 ,.2) , -10px -10px 30px 5px rgba(0 ,0 ,0 ,.2);
+	border-radius: 5px;
+	margin-top: 50px;
+	min-width: 70%;
+	max-width: 70%;
+}
+.ModalSeparator {
+	box-shadow: 0 0 1px 0px #4f8bc3;
+	margin: 10px 0px 10px 0px;
+}
+/*.ModalHead {}*/
+.ModalOptionsArea {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.ModalOptions span {padding: 10px;cursor: pointer;}
+.ModalOptions span  i {margin-right: 10px;}
+
+.ModalBody {
+	padding: 0px 10px 0px 10px;
+	max-height: 100vh;
+	/*min-height: 100vh;*/
+	overflow-y: auto;
+}
+.ModalBody::-webkit-scrollbar{width:5px;background-color:#fff;}
+.ModalBody::-webkit-scrollbar-thumb{background-color:var(--blueColor);border-radius:10px;}
+.ModalFoot {display: flex;justify-content: flex-end;align-items: center;}
+.ModalFoot button {margin-left: 20px;padding: 5px;cursor: pointer;}
+.ModalAnnimation {animation: ModalAnnimationView 1s ease;}
+@keyframes ModalAnnimationView {
+	from {transform: translateX(-100%);} to {transform: translateX(0%);}
+}
+.ModalForm {}
+.ModalFormContent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.InputKindModal {
+	padding: 5px;
+	font-size: inherit;
+	width: 23%;
+	box-shadow:inset 0px 0px 2px var(--blueColor);
+}
+
+/*===============================================[ BUTTONS STYLE ]===============================================*/
+
+button {
+	padding: 11px;
+	border:none;
+	border-radius: 5px;
+	color: #FFF;
+	font-family: inherit;
+	font-weight: bold;
+	box-shadow: 0 0 1.5px;
+	cursor: pointer;
+	min-width:100px;
+	letter-spacing: 1px;
+}
+button:hover {opacity: .7;}
+.btndgr{background-color:#ab0008;}
+.btnble{background-color:#4f8bc3;}
+.btnwrn{background-color:#bbb352;}
+.btngrn{background-color:#6dc05a;}
+
+/*===============================================[ LOADER STYLE ]===============================================*/
+
+.loader {
+	border-bottom: 5px solid #000;
+	border-top: 5px solid #000;
+	border-right: 5px solid #FFF;
+	border-left: 5px solid #FFF;
+	border-radius: 50%;
+	padding: 6px;
+	animation: loaderAnnimation_1 .5s linear infinite;
+}
+.loader { width: 15px; height: 15px; }
+@keyframes loaderAnnimation_1 {
+  0% { transform: rotate(360deg);}
+  100% { transform: rotate(0deg); }
+}
+
+/*===============================================[ ALERT	 STYLE ]===============================================*/
+
+
+.NotificationMessage {
+	position: relative;
+	background-color: #EEE;
+	border: 1px solid #EEE;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width:50px;
+	padding: 8px;
+}
+.NotificationMessage_Text {padding: 5px;}
+.NotificationMessage_Number {
+	position: absolute;
+	top: -9px;
+	right: -9px;
+	background-color: red;
+	color: #FFF;
+	padding: 6px;
+	border-radius: 50%;
+	animation: NotificationAnnimation 1.5s linear infinite;
+}
+@keyframes NotificationAnnimation { 0% { transform: scale(.8);} 100% { transform: scale(1.1); } }
+
+
+/*=================================*/
+
+.ModalDivButtonClick {
+	padding: 10px;
+	box-shadow:inset 0 0 5px var(--blueColor);
+	margin-bottom: 25px;
+	cursor: pointer;
+}
+
+/*=============================================== [ DROPBOX ] =================================================*/
+.DropBox {background-color: white;position: relative;}
+.DropBox-Content {
+	background-color: white;
+	position: absolute;
+	left: -400px;
+	bottom: -540px;
+	border:1px solid var(--blueColor);
+	z-index: 100;
+}
+.DropBox-Head , .DropBox-Foot {	letter-spacing: 1px;text-align: center;background-color: var(--blueColor); color: var(--whiteColor);}
+.DropBox-Head , .DropBox-Foot {padding: 8px;}
+.DropBox-Foot {cursor: pointer;}
+.DropBox-Head {}
+.DropBox-Body {
+	max-width: 500px;
+	min-width: 500px;
+	max-height: 450px;
+	min-height: 450px;
+	overflow-y: scroll;
+}
+																			/* [ NOTIFICATION ] */
+
+.DropBox-Body-Item {display: flex;flex-direction: row;padding: 10px;cursor: pointer;}
+.DropBox-Body-Item:hover{background: var(--gridColor);}
+.DropBox-Body-Item .blu {color:var(--blueColor);}
+.DropBox-Body-Item .grn {color:var(--greenColor);}
+.DropBox-Body-Item .dgr {color:var(--redColor);}
+.DropBox-Body-Item .yel {color:var(--yellowColor);}
+.DropBox-Body-Item div:first-child {
+	display: flex;
+	justify-content: center;
+	max-width: 60px;
+	min-width: 60px;
+	margin-right: 10px;
+}
+.DropBox-Body-Item i {font-size: 40px;}
+.DropBox-Body-Item div:last-child {font-size: 15px;}
+.DropBox-Body-Item div:last-child span {border-left: 5px solid var(--blueColor);color: var(--blueColor);padding-left: 10px;}
+
+.TodoItem div span i {font-size: 20px;margin: 0px 10px 0px 10px;}
+#TodoForm {display: flex;justify-content:space-between;align-self: center;}
+#TodoForm i {color:var(--whiteColor);margin-left: 10px;}
+#TodoForm button {box-shadow: none;padding: 0px;margin: 0px;}
+
+
+.CreditItem div span {display: block;font-size: 17px;}
+.CreditItem div a {text-decoration: none;}
+/*=================================== CIRCLE INFORMATIONS */
+.GreenCircle , .RedCircle {padding:5px;border-radius: 50%;width:3px;height:3px;}
+.GreenCircle {background-color: var(--greenColor);}
+.RedCircle {background-color: var(--redColor);}
+
+
+#AccountBankModalCreate {max-width:500px;min-width:500px;}
+
+#PlusDetailOnAAccountBankBody {padding: 10px;display: flex;flex-wrap: nowrap;overflow-x: auto;}
+
+#selectedCardAccountCurrentClient {margin: 0px;max-width: 300px;min-width: 300px;border:none;font-size:20px;}
+
+.dt-buttons button {padding: 5px;}
+.dt-buttons .fas {font-size: 25px;}
+.dtb-text {font-size: 13px;}
+
+#liveField_ConsoleMobilPh {max-height: 85vh;min-height: 85vh;}
+
+.Account_Bank_Item_Detail_Foot_Select {
+	background-color: #303a5f;
+	width: 300px;
+	color:var(--whiteColor);
+	cursor: pointer;
+}
